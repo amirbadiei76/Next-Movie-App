@@ -1,0 +1,261 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+
+:root {
+    --theme-white: #f2f2f2;
+    --theme-black: #1a1a1a;
+    
+    --background: #ffffff;
+    --foreground: #171717;
+
+    --error-dark: #ba062b;
+    --error-light: #fa5358;
+    
+    
+    /* light/dark */
+    --light-theme: #cccccc;
+    --dark-theme: #333333;
+    --dark-theme-darker: #353535;
+    
+    --light-theme-50: #cccccc80;
+    --dark-theme-50: #33333380;
+    --dark-theme-darker-50: #35353580;
+    
+    --light-theme-70: #ccccccb3;
+    --dark-theme-70: #333333b3;
+    --dark-theme-darker-70: #353535b3;
+    
+    
+    /* light/dark between */
+    --light-between: #b8b8b8;
+    --dark-between: #474747;
+
+    --light-between-50: #b8b8b880;
+    --dark-between-50: #47474780;
+
+    --light-between-70: #b8b8b8b3;
+    --dark-between-70: #474747b3;
+
+    /* light/dark second */
+    --light-secondary: #a3a3a3;
+    --dark-secondary: #5c5c5c;
+
+    --light-secondary-50: #a3a3a380;
+    --dark-secondary-50: #5c5c5c80;
+
+    --light-secondary-70: #a3a3a3b3;
+    --dark-secondary-70: #5c5c5cb3;
+
+
+    --light-blue: #4d4dff;
+    --light-blue-between: #6666ff;
+    --light-blue-second: #8080ff;
+    --light-blue-lighter: #b3b3ff;
+
+    --dark-blue: #000033;
+    --dark-blue-between: #000066;
+    --dark-blue-second: #000099;
+
+    --other-blue: #1b2431;
+    --other-blue-light: #314259;
+    --other-blue-dark: #121821;
+}
+
+* {
+    transition: 0.3s ease all;
+}
+
+.transition-item-none {
+    transition: none;
+}
+
+.transition-color {
+    transition: 0.3s ease color;
+}
+
+.transition-padding {
+  transition: 0.3s ease padding;
+}
+
+.transition-background {
+  transition: 0.3s ease background-color;
+}
+
+.transition-margin {
+  transition: 0.3s ease margin;
+}
+
+.rtl {
+    direction: rtl;
+}
+
+.ltr {
+    direction: ltr;
+}
+
+.text-security-disc {
+  -webkit-text-security: disc;
+}
+
+@utility input-base {
+    @apply outline-none rounded-md border border-dark-between dark:border-light-between px-3 py-2.5
+}
+
+@utility button-base {
+  @apply cursor-pointer font-roboto rtl:font-vazir rounded-md text-theme-black dark:text-theme-white bg-light-blue-second dark:bg-light-blue
+  border-light-blue-second dark:border-light-blue border-b-2 hover:border-b-dark-blue-second hover:dark:border-b-dark-blue
+}
+
+@utility button-2-base {
+  @apply font-roboto rtl:font-vazir rounded-md bg-light-blue-between dark:bg-light-blue hover:cursor-pointer
+  border-b-2 border-light-blue-between dark:border-light-blue hover:border-dark-blue-second hover:dark:border-dark-blue
+}
+
+@utility button-3-base {
+  @apply font-roboto rtl:font-vazir rounded-md bg-light-blue-second dark:bg-light-blue-between border-b-2 border-light-blue-second dark:border-light-blue-between hover:border-dark-blue-second hover:dark:border-dark-blue-between
+}
+
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+
+  --color-error-dark: var(--error-dark);
+  --color-error-light: var(--error-light);
+  
+  /* light/dark */
+  --color-light: var(--light-theme);
+  --color-dark: var(--dark-theme);
+  --color-dark-darker: var(--dark-theme-darker);
+  
+  --color-light-50: var(--light-theme-50);
+  --color-dark-50: var(--dark-theme-50);
+  --color-dark-darker-50: var(--dark-theme-darker-50);
+
+  --color-light-70: var(--light-theme-70);
+  --color-dark-70: var(--dark-theme-70);
+  --color-dark-darker-70: var(--dark-theme-darker-70);
+
+  /* light/dark between */
+  --color-light-between: var(--light-between);
+  --color-dark-between: var(--dark-between);
+  
+  --color-light-between-50: var(--light-between-50);
+  --color-dark-between-50: var(--dark-between-50);
+  
+  --color-light-between-70: var(--light-between-70);
+  --color-dark-between-70: var(--dark-between-70);
+  
+  /* light/dark second */
+  --color-dark-second: var(--dark-secondary);
+  --color-light-second: var(--light-secondary);
+  
+  --color-dark-second-50: var(--dark-secondary-50);
+  --color-light-second-50: var(--light-secondary-50);
+  
+  --color-dark-second-70: var(--dark-secondary-70);
+  --color-light-second-70: var(--light-secondary-70);
+
+
+  
+  --color-theme-white: var(--theme-white);
+  --color-theme-black: var(--theme-black);
+
+  /*  */
+  --color-light-blue: var(--light-blue);
+  --color-light-blue-between: var(--light-blue-between);
+  --color-light-blue-second: var(--light-blue-second);
+  --color-light-blue-lighter: var(--light-blue-lighter);
+
+  
+  /*  */
+  --color-dark-blue: var(--dark-blue);
+  --color-dark-blue-between: var(--dark-blue-between);
+  --color-dark-blue-second: var(--dark-blue-second);
+
+  --color-other-blue: var(--other-blue);
+  --color-other-blue-light: var(--other-blue-light);
+  --color-other-blue-dark: var(--other-blue-dark);
+
+
+  --font-roboto: 'Roboto';
+  --font-helvetica: 'Helvetica';
+  --font-byekan: 'BYekan';
+  --font-byekanP: 'BYekanP';
+  --font-iransans: 'IRANSans';
+  --font-vazir: 'Vazir';
+  
+}
+
+.scroll-snap-x {
+    scroll-snap-type: x mandatory;
+    scroll-snap-align: center;
+    touch-action: pan-x;
+}
+
+.scroll-hide::-webkit-scrollbar {
+    display: none;
+}
+
+.scroll-snap-align-start {
+    scroll-snap-align: start;
+}
+
+.hide-visibility {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.show-visibility {
+  opacity: 1;
+  visibility: visible;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('../../../src/assets/fonts/Roboto-Regular.ttf');
+}
+
+
+@font-face {
+  font-family: 'Helvetica';
+  src: url('../../../src/assets/fonts/Helvetica.ttf');
+}
+
+
+@font-face {
+  font-family: 'BYekanP';
+  src: url('../../../src/assets/fonts/BYekan_Plus.ttf');
+}
+
+
+@font-face {
+  font-family: 'BYekan';
+  src: url('../../../src/assets/fonts/Yekan.ttf');
+}
+
+@font-face {
+  font-family: 'IRANSans';
+  src: url('../../../src/assets/fonts/IRANSans_Light.ttf');
+}
+
+@font-face {
+  font-family: 'Vazir';
+  src: url('../../../src/assets/fonts/Vazir-Regular-FD.ttf');
+}

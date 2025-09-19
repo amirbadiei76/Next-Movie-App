@@ -1,0 +1,70 @@
+{
+    "Movies": {
+        "nav": {
+            "home": "خانه",
+            "categories": "دسته بندی ها",
+            "persons": "افراد",
+            "login": "ورود",
+            "fa": "فارسی",
+            "en": "English",
+            "profile": "پروفایل",
+            "search": "جستجو",
+            "searchInputHolder": "جستجوی فیلم، بازیگر و..."
+        },
+        "movie": {
+            "genre": "ژانر",
+            "director": "کارگردان",
+            "cast": "بازیگران",
+            "starring": "ستارگان",
+            "year": "سال",
+            "duration": "مدت زمان",
+            "lang": "زبان",
+            "summary": "خلاصه داستان",
+            "more-info": "اطلاعات تکمیلی",
+
+            "hour": "ساعت",
+            "minute": "دقیقه",
+            "s1": "فصل اول",
+            "episode": "قسمت",
+            "view-all": "مشاهده همه نتایج",
+            "sticky-sub": "زیرنویس چسبیده",
+            "persian-dub": "دوبله فارسی",
+            "original-ver": "نسخه اصلی",
+            "quality": "کیفیت",
+            "view-links": "مشاهده لینک ها",
+            "episode-counts": "تعداد قسمت ها",
+            "related-movies": "فیلم های مرتبط",
+            "related-series": "سریال های مرتبط",
+
+            "designed-by": "طراحی شده توسط",
+            "watch-trailer": "مشاهده تریلر",
+            "download-links": "لینک های دانلود"
+        },
+        "auth": {
+            "signin": "ورود",
+            "signup": "ثبت نام",
+            "email": "ایمیل",
+            "password": "رمز عبور",
+            "confirm-password": "تکرار رمز عبور",
+            "first-name": "نام",
+            "last-name": "نام خانوادگی",
+
+            "resend-email": "ارسال مجدد ایمیل",
+            "email-sended": "ایمیل تأیید برای شما ارسال شد. لطفاً صندوق ورودی خود را بررسی کرده و با کلیک روی لینک موجود در ایمیل، حساب خود را فعال کنید.",
+            "email-not-send": "اگر همچنان ایمیلی دریافت نکرده‌اید، می‌توانید از طریق گزینه زیر، درخواست ارسال مجدد نمایید",
+            "register-now": "ثبت نام کنید",
+            "login-now": "وارد شوید",
+            "back-home-page": "بازگشت به صفحه اصلی",
+            "new-password": "ایجاد رمز جدید",
+            "forgot-password": "رمز عبور را فراموش کرده‌اید؟",
+            "dont-have-account": "حساب کاربری ندارید؟",
+            "have-account": "دسترسی به حساب دارید؟",
+            "continue-google": "ادامه با حساب گوگل",
+            "login-google": "ورود با گوگل",
+            "confirm": "تایید",
+
+            "remember-me": "مرا بخاطر بسپار",
+            "or": "یا"
+        }
+    }
+}

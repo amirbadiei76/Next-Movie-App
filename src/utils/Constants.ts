@@ -1,0 +1,1 @@
+export const loginURL = 'https://newz.pythonanywhere.com/login/'

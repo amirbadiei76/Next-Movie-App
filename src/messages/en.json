@@ -1,0 +1,70 @@
+{
+    "Movies": {
+        "nav": {
+            "home": "Home",
+            "categories": "Categories",
+            "persons": "Persons",
+            "login": "Login",
+            "profile": "Profile",
+            "search": "Search",
+            "fa": "فارسی",
+            "en": "English",
+            "searchInputHolder": "Search for movies, actors, etc."
+        },
+        "movie": {
+            "genre": "genre",
+            "director": "Director",
+            "cast": "Cast",
+            "starring": "Starring",
+            "year": "Year",
+            "duration": "Duration",
+            "lang": "Language",
+            "summary": "Summary",
+            "more-info": "Additional Information",
+
+            "hour": "h",
+            "minute": "m",
+            "s1": "Season 1",
+            "episode": "Episode",
+            "view-all": "View all results",
+            "sticky-sub": "sticky subtitle",
+            "persian-dub": "persian dubbing",
+            "original-ver": "original version",
+            "quality": "Quality",
+            "view-links": "View Links",
+            "episode-counts": "Episode counts",
+            "related-movies": "Related Movies",
+            "related-series": "Related Series",
+
+            "designed-by": "Designed by",
+            "watch-trailer": "Watch Trailer",
+            "download-links": "Download Links"
+        },
+        "auth": {
+            "signin": "Sign in",
+            "signup": "Sign up",
+            "email": "Email",
+            "password": "Password",
+            "confirm-password": "Confirm Password",
+            "first-name": "First Name",
+            "last-name": "Last Name",
+
+            "resend-email": "Resend Email",
+            "email-sended": "A confirmation email has been sent to your inbox. Please check your email and click the verification link to activate your account.",
+            "email-not-send": "Still no email? You can request a resend using the option below.",
+            "register-now": "Register Now",
+            "login-now": "Login Now",
+            "back-home-page": "Back to Home Page",
+            "new-password": "New Password",
+            "forgot-password": "Forgot your password?",
+            "dont-have-account": "Don't Have an Account?",
+            "have-account": "Do you have access to an account?",
+            "continue-google": "Continue with Google",
+            "login-google": "Login with Google",
+            "confirm": "Confirm",
+
+            "remember-me": "Remember me",
+            "or": "Or"
+        }
+    }
+}
