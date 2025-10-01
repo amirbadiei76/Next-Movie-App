@@ -5,6 +5,8 @@ import React, { FormEvent, useEffect, useRef, useState } from 'react'
 import { BiCheck } from 'react-icons/bi'
 import { BsEye, BsEyeSlash } from 'react-icons/bs'
 import { GoogleGLogo } from './SVGIcons'
+import { useMutation, useQuery } from '@tanstack/react-query'
+import { registerQuery } from '@/utils/FetchQueries'
 
 export default function RegisterBox() {
     
@@ -15,7 +17,6 @@ export default function RegisterBox() {
     const [email, setEmail] = useState('')
     const [firstName, setFirstName] = useState('')
     const [lastName, setLastName] = useState('')
-    const [birthDate, setBirthDate] = useState('')
 
     const [password, setPassword] = useState('')
     const [showPassword, setShowPassword] = useState(false)
@@ -28,9 +29,22 @@ export default function RegisterBox() {
 
     const submitRegister = (e: FormEvent) => {
         e.preventDefault()
-        router.replace('/send-email')
-        console.log(email, password)
+        mutation.mutate()
     }
+
+    const mutation = useMutation({
+        mutationKey: ['register-res'],
+        mutationFn: () => registerQuery(email, password, firstName, lastName),
+        onSuccess: () => {
+            setRegisterHasError(false)
+            setRegisterError("")
+            router.replace('/send-email')
+        },
+        onError: (error) => {
+            setRegisterHasError(true)
+            setRegisterError(t('auth.email-used-error'))
+        }
+    })
     
 
     return (
@@ -104,7 +118,7 @@ export default function RegisterBox() {
 
             <label
                 style={{opacity: registerHasError ? 1 : 0, visibility: registerHasError ? 'visible' : 'hidden'}}
-                className={`h-6 translate-y-2 text-error-dark dark:text-error-light font-roboto rtl:font-vazir`}
+                className={`min-h-6 translate-y-2 text-error-dark dark:text-error-light font-roboto rtl:font-vazir`}
             >{registerError}</label>
 
             {/*

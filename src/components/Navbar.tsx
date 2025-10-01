@@ -72,7 +72,7 @@ export default function Navbar() {
     }, [themeRef])
 
     const isInAuth = () => {
-        return (pathname === ('/' + locale + '/send-email') || pathname === ('/' + locale + '/login') || pathname === ('/' + locale + '/signup') || pathname === ('/' + locale + '/forgot-password'))
+        return (pathname === ('/' + locale + '/send-email') || pathname === ('/' + locale + '/login') || pathname === ('/' + locale + '/register') || pathname === ('/' + locale + '/forgot-password'))
     }
 
     return (

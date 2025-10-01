@@ -38,11 +38,13 @@
 
             "designed-by": "Designed by",
             "watch-trailer": "Watch Trailer",
-            "download-links": "Download Links"
+            "download-links": "Download Links",
+            "full-details": "Full Details",
+            "leave-comment": "Leave a Comment"
         },
         "auth": {
-            "signin": "Sign in",
-            "signup": "Sign up",
+            "signin": "Login",
+            "signup": "Register",
             "email": "Email",
             "password": "Password",
             "confirm-password": "Confirm Password",
@@ -64,7 +66,8 @@
             "confirm": "Confirm",
 
             "remember-me": "Remember me",
-            "or": "Or"
+            "or": "Or",
+            "email-used-error": "This email has already been used."
         }
     }
 }

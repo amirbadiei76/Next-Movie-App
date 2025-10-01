@@ -33,7 +33,7 @@ export default function ForgotPasswordBox() {
           </div>
           <label
                 style={{opacity: forgotHasError ? 1 : 0, visibility: forgotHasError ? 'visible' : 'hidden'}}
-                className={`h-6 translate-y-2 text-error-dark dark:text-error-light font-roboto rtl:font-vazir`}
+                className={`min-h-6 translate-y-2 text-error-dark dark:text-error-light font-roboto rtl:font-vazir`}
             >{forgotError}</label> 
             <div className='flex flex-col gap-5 mt-5 w-full'>
                 <div className='flex flex-col justify-center items-center gap-5 w-full'>

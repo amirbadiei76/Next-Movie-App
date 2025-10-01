@@ -3,7 +3,7 @@ import { useLocale, useTranslations } from 'next-intl'
 import React, { FormEvent, useEffect, useRef, useState } from 'react'
 import { BsEye, BsEyeSlash } from 'react-icons/bs'
 import { loginQuery } from '@/utils/FetchQueries'
-import { useQuery } from '@tanstack/react-query'
+import { useMutation, useQuery } from '@tanstack/react-query'
 import { GoogleGLogo } from '@/components/SVGIcons';
 import { BiCheck } from 'react-icons/bi';
 import { Link } from '@/i18n/navigation';
@@ -24,23 +24,25 @@ export default function LoginBox() {
 
     const passwordInputRef = useRef<HTMLInputElement>(null)
 
-    const {isPending, error, isSuccess, data, refetch} = useQuery({
-        queryKey: ['login-res'],
-        queryFn: () => loginQuery(email, password)
+    const mutation = useMutation({
+        mutationKey: ['login-res'],
+        mutationFn: () => loginQuery(email, password),
+        onSuccess: () => {
+            setLoginHasError(false)
+            setLoginError("")
+        },
+        onError: (error) => {
+            setLoginHasError(true)
+            // setLoginError(t('auth.email-used-error'))
+        }
     })
 
     const submitLogin = (e: FormEvent) => {
         e.preventDefault()
         console.log(email, password)
-        refetch()
+        mutation.mutate()
     }
 
-    
-    useEffect(() => {
-        if (data) {
-            console.log(data)
-        }
-    }, [data]);
 
     return (
         <form
@@ -97,13 +99,13 @@ export default function LoginBox() {
             </label>
             <label
                 style={{opacity: loginHasError ? 1 : 0, visibility: loginHasError ? 'visible' : 'hidden'}}
-                className={`h-6 translate-y-2 text-error-dark dark:text-error-light font-roboto rtl:font-vazir`}
+                className={`min-h-6 translate-y-2 text-error-dark dark:text-error-light font-roboto rtl:font-vazir`}
             >{loginError}</label>
             <div className='flex flex-col gap-5 mt-5 w-full'>
                 <div className='flex flex-col justify-center items-center gap-5 w-full'>
                     <button className='button-3-base text-theme-black dark:text-theme-white w-full py-2 cursor-pointer'>{t('auth.signin')}</button>
                     <div className='flex flex-col items-center gap-2.5 w-full'>
-                        <label className='font-roboto rtl:font-vazir text-theme-black dark:text-theme-white'>{t('auth.dont-have-account')} <Link className='font-roboto rtl:font-vazir text-dark-blue-second dark:text-light-blue-lighter' href={'/signup'}>&nbsp;{t('auth.register-now')}</Link></label>
+                        <label className='font-roboto rtl:font-vazir text-theme-black dark:text-theme-white'>{t('auth.dont-have-account')} <Link className='font-roboto rtl:font-vazir text-dark-blue-second dark:text-light-blue-lighter' href={'/register'}>&nbsp;{t('auth.register-now')}</Link></label>
                         <label className='font-roboto rtl:font-vazir text-theme-black dark:text-theme-white'>{t('auth.forgot-password')} <Link className='font-roboto rtl:font-vazir text-dark-blue-second dark:text-light-blue-lighter' href={'/forgot-password'}>&nbsp;{t('auth.new-password')}</Link></label>
                     </div>
                 </div>

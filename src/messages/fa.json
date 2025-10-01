@@ -38,7 +38,9 @@
 
             "designed-by": "طراحی شده توسط",
             "watch-trailer": "مشاهده تریلر",
-            "download-links": "لینک های دانلود"
+            "download-links": "لینک های دانلود",
+            "full-details": "مشخصات کامل",
+            "leave-comment": "دیدگاهتان را بنویسید"
         },
         "auth": {
             "signin": "ورود",
@@ -64,7 +66,8 @@
             "confirm": "تایید",
 
             "remember-me": "مرا بخاطر بسپار",
-            "or": "یا"
+            "or": "یا",
+            "email-used-error": "این ایمیل قبلاً استفاده شده است."
         }
     }
 }
