@@ -34,6 +34,7 @@ import { BiDislike, BiLike, BiSolidDislike, BiSolidLike } from 'react-icons/bi'
 import MovieRateContainer from '@/components/MovieRateContainer'
 import AddComment from '@/components/AddComment'
 import AllComments from '@/components/AllComments'
+import ShowMovieRate from '@/components/ShowMovieRate'
 
 interface IMovieDetailProps {
     params: Promise<{name: string, locale: string}>,
@@ -74,9 +75,8 @@ export default async function MovieDetail({params}: IMovieDetailProps) {
                 rate: 37
             },
             site: {
-                vote: 96,
                 like: 21,
-                dislike: 129,
+                dislike: 12,
             }
         },
         release: '2022/12/11',
@@ -541,57 +541,112 @@ export default async function MovieDetail({params}: IMovieDetailProps) {
                 image: theBear.src
             },
         ],
-        comments: [
-            {
-                id: "1",
-                name: "Name 1",
-                description: "برا فصل دوم تمدید شد",
-                replyTo: null,
-            },
-            {
-                id: "2",
-                name: "King",
-                description: "سریال با حالی بود\nممنونم از تیم تون",
-                replyTo: null,
-            },
-            {
-                id: "3",
-                name: "Amir B",
-                description: "سلام.\nفصل دومش کی قرار میگیره؟",
-                replyTo: null,
-            },
-            {
-                id: "4",
-                name: "Admin",
-                description: "فصل دوم هنوز ساخته نشده",
-                replyTo: "3",
-            },
-            {
-                id: "5",
-                name: "رسول",
-                description: "ببخشید من هر چی میخام دانلود کنم میگه فیلتر شکن را خاموش کنید من فیلتر شکن ندارم چیکار کنم گه بتونم دانلود کنم؟",
-                replyTo: null,
-            },
-            {
-                id: "6",
-                name: "amir shelbib",
-                description: "Nice",
-                replyTo: null,
-            },
-            {
-                id: "7",
-                name: "Dark Eater Midear",
-                description: "قسمت هفتش عالی بودد لامصب اوج هیجان و قدرتو نشون داد",
-                replyTo: "6",
-            },
-            {
-                id: "8",
-                name: "Tony Soprano",
-                description: "به تام هاردی میرسه",
-                replyTo: "7",
-            }
-
-        ]
+        comments: {
+            count: 3,
+            next: null,
+            previous: null,
+            total_pages: 1,
+            current_page: 1,
+            page_size: 20,
+            results: [
+                {
+                    id: "9e345d43-af33-4f46-a792-d9302d22f117",
+                    author: {
+                        id: 57,
+                        username: "hamedd009@gmail.com",
+                        email: "hamedd009@gmail.com",
+                        full_name: "hamedd009@gmail.com"
+                    },
+                    display_name: "aergae5_0",
+                    text: "aeg5aerg_c0",
+                    is_active: true,
+                    has_spoiler: false,
+                    created_at: "2025-10-02T18:28:08.395889Z",
+                    updated_at: "2025-10-02T18:28:08.395889Z",
+                    reply_count: 0,
+                    depth: 2,
+                    parent: "807e3418-e3f4-469a-b679-a31f6ed232e9",
+                    replies: []
+                },
+                {
+                    id: "807e3418-e3f4-469a-b679-a31f6ed232e9",
+                    author: {
+                        id: 59,
+                        username: "hamedd002@gmail.com",
+                        email: "hamedd002@gmail.com",
+                        full_name: "hamedd002@gmail.com"
+                    },
+                    display_name: "tydshr_1",
+                    text: "srth_c1",
+                    is_active: true,
+                    has_spoiler: false,
+                    created_at: "2025-10-02T18:27:42.375731Z",
+                    updated_at: "2025-10-02T18:27:42.375731Z",
+                    reply_count: 1,
+                    depth: 1,
+                    parent: "c2591d30-d67c-49f6-92ea-700ad6c6a179",
+                    replies: []
+                },
+                {
+                    id: "c2591d30-d67c-49f6-92ea-700ad6c6a179",
+                    author: null,
+                    display_name: "بیصدا_2",
+                    text: "Root comment_c2",
+                    is_active: true,
+                    has_spoiler: false,
+                    created_at: "2025-10-02T17:00:43.684271Z",
+                    updated_at: "2025-10-02T17:00:43.684271Z",
+                    reply_count: 1,
+                    depth: 0,
+                    parent: null,
+                    replies: [
+                        {
+                            id: "807e3418-e3f4-469a-b679-a31f6ed232e9",
+                            author: {
+                                id: 59,
+                                username: "hamedd002@gmail.com",
+                                email: "hamedd002@gmail.com",
+                                full_name: "hamedd002@gmail.com"
+                            },
+                            display_name: "tydshr_3",
+                            content_type: 10,
+                            object_id: 2,
+                            parent: "c2591d30-d67c-49f6-92ea-700ad6c6a179",
+                            text: "srth_c3",
+                            is_active: true,
+                            has_spoiler: false,
+                            created_at: "2025-10-02T18:27:42.375731Z",
+                            updated_at: "2025-10-02T18:27:42.375731Z",
+                            replies: [
+                                {
+                                    id: "9e345d43-af33-4f46-a792-d9302d22f117",
+                                    author: {
+                                        id: 57,
+                                        username: "hamedd009@gmail.com",
+                                        email: "hamedd009@gmail.com",
+                                        full_name: "hamedd009@gmail.com"
+                                    },
+                                    display_name: "aergae5_4",
+                                    content_type: 1,
+                                    object_id: 6,
+                                    parent: "807e3418-e3f4-469a-b679-a31f6ed232e9",
+                                    text: "aeg5aerg_c4",
+                                    is_active: true,
+                                    has_spoiler: false,
+                                    created_at: "2025-10-02T18:28:08.395889Z",
+                                    updated_at: "2025-10-02T18:28:08.395889Z",
+                                    replies: [],
+                                    reply_count: 0,
+                                    depth: 2
+                                }
+                            ],
+                            reply_count: 1,
+                            depth: 1
+                        }
+                    ]
+                }
+            ]
+        }
     }
 
 
@@ -605,7 +660,7 @@ export default async function MovieDetail({params}: IMovieDetailProps) {
                 // src={dDark.src}
                 // className='w-full absolute top-0 z-[-5] opacity-75'
                 src={movie.poster}
-                className='w-full min-h-300 lg:min-h-190 absolute top-0 z-[-6] object-cover pointer-events-none'
+                className='w-full min-h-300 lg:min-h-190 absolute top-0 -z-10 object-cover pointer-events-none'
             />
             {/* <div className='w-full h-140 top-0 absolute backdrop-blur-lg bg-radial to-30% from-transparent to-light dark:to-dark z-[-3]'></div> */}
             <section className='w-full min-h-135 pt-12 pb-10 backdrop-blur-lg before:content-[""] before:absolute before:inset-[3%] before:z-[-1] bg-radial to-58% from-transparent to-light dark:to-dark'>
@@ -642,10 +697,7 @@ export default async function MovieDetail({params}: IMovieDetailProps) {
                                         <strong className={`ml-1 text-lg text-theme-black dark:text-theme-white ${locale === 'fa' ? 'font-vazir' : 'font-roboto'}`}>{movie.ratings.imdb.rate}</strong>
                                     </div>
 
-                                    <div className={`rounded-full h-10 gap-2.5 bg-light-blue-between dark:bg-other-blue-dark flex items-center px-5 ltr ${locale === 'fa' ? 'ml-6' : 'mr-6'}`}>
-                                        <FaHeart className='text-2xl text-theme-black dark:text-theme-white' />
-                                        <strong className={`ml-1 text-lg text-theme-black dark:text-theme-white ${locale === 'fa' ? 'font-vazir' : 'font-roboto'}`}>{movie.ratings.site.vote}%</strong>
-                                    </div>
+                                    <ShowMovieRate movie={movie} />
                                 </div>
                                 
                                 <div className='inline-block translate-y-1'>
@@ -834,15 +886,8 @@ export default async function MovieDetail({params}: IMovieDetailProps) {
                     />
                 </div>
 
-                <div className='relative lg:px-25 md:px-10 sm:px-10 px-5 py-4 pb-8'>
-                    <strong className={`pointer-events-none text-dark text-lg tracking-wider transition-padding dark:text-light absolute bg-light dark:bg-dark px-3 top-0.5 transition-item-none
-                            rtl:font-vazir rtl:right-13 left-13 sm:rtl:right-20 sm:left-20 md:rtl:right-20 md:left-20 lg:rtl:right-33 lg:left-33 rtl:left-auto right-auto font-roboto`}
-                        >{t('movie.leave-comment')}</strong>
-
-                    <div className='border-[0.001rem] border-dark-second flex gap-4.5 flex-col dark:border-light-second p-8 rounded-md'>
-                        <AddComment />
-                    </div>
-                </div>
+                <AddComment hasCancel={false} />
+                
 
                 <AllComments comments={movie.comments} />
             

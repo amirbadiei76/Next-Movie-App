@@ -11,7 +11,7 @@ type TMovieContext = {
     changeTheme: () => void
 }
 
-export type ThemeTypes = 'dark' | 'light';
+export type ThemeTypes = 'dark' | 'light' | 'system';
 
 const MovieContext = createContext({} as TMovieContext)
 
@@ -25,6 +25,10 @@ export function MovieContextProvider ({children}: MovieContextProviderProps) {
     const [theme, setTheme] = useState<ThemeTypes>('light');
     
     const changeTheme = () => {
+        // const root = document.documentElement;
+        // if (theme === 'system') {
+            // const sytemTheme = window.matchMedia('(prefers-color-scheme: dark)') ? 'dark' : 'light'
+        // }
         setTheme((prevTheme) => (prevTheme === 'dark') ? 'light' : 'dark')
         document.documentElement.classList.toggle('dark')
     }

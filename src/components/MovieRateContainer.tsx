@@ -16,6 +16,7 @@ export default function MovieRateContainer({ movie }: { movie: any }) {
         setLiked((liked: boolean) => !liked)
 
         setLikedNumber((likes: number) => !liked ? likes + 1 : likes - 1)
+        movie.ratings.site.like = (!liked) ? movie.ratings.site.like + 1 : movie.ratings.site.like - 1;
         // setLikedNumber((likes: number) => likes + 1)
         // movie.ratings.site.like = likedNumber;
         
@@ -38,7 +39,8 @@ export default function MovieRateContainer({ movie }: { movie: any }) {
         // }
 
 
-        console.log('liked: ' + liked + ', dis: ' + disliked)
+        // console.log('liked: ' + liked + ', dis: ' + disliked)
+        console.log('liked: ' + movie.ratings.site.like + ', dis: ' + movie.ratings.site.dislike)
     }
 
     function toggleDislike () {
@@ -46,6 +48,7 @@ export default function MovieRateContainer({ movie }: { movie: any }) {
         setdisLiked((disliked: boolean) => !disliked)
 
         setdisLikedNumber((dislikes: number) => !disliked ? dislikes + 1 : dislikes - 1)
+        movie.ratings.site.dislike = (!disliked) ? movie.ratings.site.dislike + 1 : movie.ratings.site.dislike - 1;
 
         if (liked) {
             setLiked(false)
@@ -66,11 +69,12 @@ export default function MovieRateContainer({ movie }: { movie: any }) {
         console.log(likedNumber)
 
 
-        console.log('liked: ' + liked + ', dis: ' + disliked)
+        // console.log('liked: ' + liked + ', dis: ' + disliked)
+        console.log('liked: ' + movie.ratings.site.like + ', dis: ' + movie.ratings.site.dislike)
     }
 
     return (
-        <div className={`rounded-full overflow-hidden w-42 h-10 mt-3 lg:mt-0 bg-light-blue-between dark:bg-other-blue flex items-center justify-between`}>
+        <div className={`rounded-full overflow-hidden w-48 h-10 mt-3 lg:mt-0 bg-light-blue-between dark:bg-other-blue flex items-center justify-between`}>
             <div onClick={toggleLike} className='flex w-1/2 h-full hover:dark:bg-other-blue-dark hover:bg-light-blue-between bg-light-blue-second dark:bg-other-blue px-2.5 hover:cursor-pointer gap-1.5 justify-center items-center rtl:pl-2.5 rtl:pr-5 pl-5 pr-2.5'>
                 {   liked ?
                     <BiSolidLike className='text-2xl text-theme-black dark:text-theme-white pointer-events-none' /> :

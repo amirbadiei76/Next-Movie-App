@@ -40,7 +40,15 @@
             "watch-trailer": "Watch Trailer",
             "download-links": "Download Links",
             "full-details": "Full Details",
-            "leave-comment": "Leave a Comment"
+            "leave-comment": "Leave a Comment",
+            "submit-comment": "Submit",
+            "cancel-comment": "Cancel",
+            "comment-here": "Leave your comment",
+            "your-name": "Your name",
+            "your-email": "Your email",
+            "has-spoil": "Contains spoilers",
+            "comments": "Comments",
+            "reply-to": "Reply to "
         },
         "auth": {
             "signin": "Login",

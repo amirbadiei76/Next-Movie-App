@@ -40,7 +40,15 @@
             "watch-trailer": "مشاهده تریلر",
             "download-links": "لینک های دانلود",
             "full-details": "مشخصات کامل",
-            "leave-comment": "دیدگاهتان را بنویسید"
+            "leave-comment": "دیدگاهتان را بنویسید",
+            "submit-comment": "ارسال",
+            "cancel-comment": "لغو",
+            "comment-here": "دیدگاه خود را بنویسید",
+            "your-name": "نام شما",
+            "your-email": "ایمیل شما",
+            "has-spoil": "دارای اسپویل",
+            "comments": "دیدگاه ها",
+            "reply-to": "در پاسخ به "
         },
         "auth": {
             "signin": "ورود",
