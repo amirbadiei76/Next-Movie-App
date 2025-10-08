@@ -550,100 +550,94 @@ export default async function MovieDetail({params}: IMovieDetailProps) {
             page_size: 20,
             results: [
                 {
-                    id: "9e345d43-af33-4f46-a792-d9302d22f117",
-                    author: {
-                        id: 57,
-                        username: "hamedd009@gmail.com",
-                        email: "hamedd009@gmail.com",
-                        full_name: "hamedd009@gmail.com"
-                    },
-                    display_name: "aergae5_0",
-                    text: "aeg5aerg_c0",
+                    id: "b56ecde3-3652-40dd-995e-5961fc99c43e",
+                    display_name: "1",
+                    text: "parent comment",
                     is_active: true,
                     has_spoiler: false,
-                    created_at: "2025-10-02T18:28:08.395889Z",
-                    updated_at: "2025-10-02T18:28:08.395889Z",
-                    reply_count: 0,
-                    depth: 2,
-                    parent: "807e3418-e3f4-469a-b679-a31f6ed232e9",
-                    replies: []
-                },
-                {
-                    id: "807e3418-e3f4-469a-b679-a31f6ed232e9",
-                    author: {
-                        id: 59,
-                        username: "hamedd002@gmail.com",
-                        email: "hamedd002@gmail.com",
-                        full_name: "hamedd002@gmail.com"
-                    },
-                    display_name: "tydshr_1",
-                    text: "srth_c1",
-                    is_active: true,
-                    has_spoiler: false,
-                    created_at: "2025-10-02T18:27:42.375731Z",
-                    updated_at: "2025-10-02T18:27:42.375731Z",
-                    reply_count: 1,
-                    depth: 1,
-                    parent: "c2591d30-d67c-49f6-92ea-700ad6c6a179",
-                    replies: []
-                },
-                {
-                    id: "c2591d30-d67c-49f6-92ea-700ad6c6a179",
-                    author: null,
-                    display_name: "بیصدا_2",
-                    text: "Root comment_c2",
-                    is_active: true,
-                    has_spoiler: false,
-                    created_at: "2025-10-02T17:00:43.684271Z",
-                    updated_at: "2025-10-02T17:00:43.684271Z",
+                    created_at: "2025-10-07T17:11:54.397649Z",
+                    updated_at: "2025-10-07T17:11:54.397649Z",
                     reply_count: 1,
                     depth: 0,
                     parent: null,
                     replies: [
                         {
-                            id: "807e3418-e3f4-469a-b679-a31f6ed232e9",
-                            author: {
-                                id: 59,
-                                username: "hamedd002@gmail.com",
-                                email: "hamedd002@gmail.com",
-                                full_name: "hamedd002@gmail.com"
-                            },
-                            display_name: "tydshr_3",
-                            content_type: 10,
+                            id: "9102170d-0999-4ad9-8aae-4b9c9c0cbac2",
+                            display_name: "2",
+                            content_type: 2,
                             object_id: 2,
-                            parent: "c2591d30-d67c-49f6-92ea-700ad6c6a179",
-                            text: "srth_c3",
+                            parent: "b56ecde3-3652-40dd-995e-5961fc99c43e",
+                            text: "replay to parent comment",
                             is_active: true,
                             has_spoiler: false,
-                            created_at: "2025-10-02T18:27:42.375731Z",
-                            updated_at: "2025-10-02T18:27:42.375731Z",
+                            created_at: "2025-10-07T17:12:39.237538Z",
+                            updated_at: "2025-10-07T17:12:39.237538Z",
                             replies: [
                                 {
-                                    id: "9e345d43-af33-4f46-a792-d9302d22f117",
-                                    author: {
-                                        id: 57,
-                                        username: "hamedd009@gmail.com",
-                                        email: "hamedd009@gmail.com",
-                                        full_name: "hamedd009@gmail.com"
-                                    },
-                                    display_name: "aergae5_4",
-                                    content_type: 1,
-                                    object_id: 6,
-                                    parent: "807e3418-e3f4-469a-b679-a31f6ed232e9",
-                                    text: "aeg5aerg_c4",
+                                    id: "6d9dd82f-c1a9-4207-8bbd-413253a280e3",
+                                    display_name: "5",
+                                    content_type: 2,
+                                    object_id: 5,
+                                    parent: "9102170d-0999-4ad9-8aae-4b9c9c0cbac2",
+                                    text: "replay to level 2 ... replay to 3",
                                     is_active: true,
                                     has_spoiler: false,
-                                    created_at: "2025-10-02T18:28:08.395889Z",
-                                    updated_at: "2025-10-02T18:28:08.395889Z",
+                                    created_at: "2025-10-07T17:14:34.404027Z",
+                                    updated_at: "2025-10-07T17:17:20.142642Z",
+                                    replies: [],
+                                    reply_count: 0,
+                                    depth: 2
+                                },
+                                {
+                                    id: "3989d339-ddfb-4d01-889f-734cf151a891",
+                                    display_name: "3",
+                                    content_type: 3,
+                                    object_id: 3,
+                                    parent: "9102170d-0999-4ad9-8aae-4b9c9c0cbac2",
+                                    text: "replay to 2 - level 2 -",
+                                    is_active: true,
+                                    has_spoiler: false,
+                                    created_at: "2025-10-07T17:13:22.781885Z",
+                                    updated_at: "2025-10-07T17:13:22.781885Z",
                                     replies: [],
                                     reply_count: 0,
                                     depth: 2
                                 }
                             ],
-                            reply_count: 1,
+                            reply_count: 2,
+                            depth: 1
+                        },
+                        {
+                            id: "9102170d-099f-4ad9-8aae-b69c9c0cbac2",
+                            display_name: "lorem",
+                            content_type: 2,
+                            object_id: 2,
+                            parent: "b56ecde3-3652-40dd-9964-5961fc99c43e",
+                            text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque aspernatur sequi cumque, quisquam itaque placeat delectus ipsam eveniet nulla eligendi reiciendis aut hic magni velit quibusdam, veniam ducimus soluta, consectetur perspiciatis. Nulla blanditiis in pariatur voluptatem delectus fugiat iusto adipisci consequatur nihil ducimus ratione accusamus, vero, perspiciatis facilis, dicta totam ut quisquam? Quis earum facilis eveniet dolor magni aliquid et! Quia, obcaecati. Fuga pariatur excepturi dolorum tempora deserunt, beatae ea sed facere voluptatibus ullam natus reiciendis repellendus culpa nihil? Illo distinctio voluptatum repellat quae? Temporibus obcaecati alias incidunt, dignissimos minus repellat architecto rerum quis veniam similique eligendi illum ex accusantium.",
+                            is_active: true,
+                            has_spoiler: false,
+                            created_at: "2025-10-07T17:14:39.237538Z",
+                            updated_at: "2025-10-07T17:14:39.237538Z",
+                            replies: [],
+                            reply_count: 0,
                             depth: 1
                         }
                     ]
+                },
+                {
+                    id: "9102170d-099f-4ad9-8aae-b69c9c0cbac2",
+                    display_name: "2-lorem",
+                    content_type: 2,
+                    object_id: 2,
+                    parent: "b56ecde3-3652-40dd-9964-5961fc99c43e",
+                    text: "Lorem, ipsum dolor sit amet consectetur adipisicing 334fdfdggbgnbn. Neque aspernatur sequi cumque, quisquam itaque placeat delectus ipsam eveniet nulla eligendi reiciendis aut hic magni velit quibusdam, veniam ducimus soluta, consectetur perspiciatis. Nulla blanditiis in pariatur voluptatem delectus fugiat iusto adipisci consequatur nihil ducimus ratione accusamus, vero, perspiciatis facilis, dicta totam ut quisquam? Quis earum facilis eveniet dolor magni aliquid et! Quia, obcaecati. Fuga pariatur excepturi dolorum tempora deserunt, beatae ea sed facere voluptatibus ullam natus reiciendis repellendus culpa nihil? Illo distinctio voluptatum repellat quae? Temporibus obcaecati alias incidunt, dignissimos minus repellat architecto rerum quis veniam similique eligendi illum ex accusantium.",
+                    is_active: true,
+                    has_spoiler: false,
+                    created_at: "2025-10-07T17:14:39.237538Z",
+                    updated_at: "2025-10-07T17:14:39.237538Z",
+                    replies: [],
+                    reply_count: 0,
+                    depth: 0
                 }
             ]
         }
@@ -886,11 +880,7 @@ export default async function MovieDetail({params}: IMovieDetailProps) {
                     />
                 </div>
 
-                <AddComment hasCancel={false} />
-                
-
                 <AllComments comments={movie.comments} />
-            
             </main>
 
             <SiteFooter />

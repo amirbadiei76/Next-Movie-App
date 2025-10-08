@@ -57,7 +57,7 @@ export default function LocaleSwitcher() {
             localStorage.setItem('theme', 'light')        
         }
     }, [])
-
+    
     useEffect(() => {
         if (themeState === 'dark' && !document.documentElement.classList.contains('dark')) setDarkTheme()
     }, [locale])

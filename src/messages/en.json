@@ -48,7 +48,8 @@
             "your-email": "Your email",
             "has-spoil": "Contains spoilers",
             "comments": "Comments",
-            "reply-to": "Reply to "
+            "reply-to": "Reply to ",
+            "reply-comment": "Reply to comment"
         },
         "auth": {
             "signin": "Login",

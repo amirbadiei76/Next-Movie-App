@@ -7,17 +7,62 @@ import { TComment } from './SingleComment';
 export interface IAddComment {
     hasCancel?: boolean,
     cancelFn?: () => void,
+    addComment?: (name: string, hasSpoiler: boolean, description: string) => void,
+    addRoot: (comment: TComment) => void,
     parent?: TComment | null,
+    comments?: TComment[]
+    
 }
 
 
-export default function AddComment({ hasCancel = false, cancelFn, parent } : IAddComment) {
+export default function AddComment({ hasCancel = false, cancelFn, parent, addComment, addRoot, comments } : IAddComment) {
 
     const [description, setDescription] = useState('')
     const [name, setName] = useState('')
     const [hasSpoiler, sethasSpoiler] = useState(false)
+    const [allComments, setAllComments] = useState(comments)
 
     const t = useTranslations("Movies");
+
+    function addToRoot () {
+        if (allComments) {
+            const addedComment = {
+              display_name: name,
+              has_spoiler: hasSpoiler,
+              text: description,
+              created_at: new Date().toString(),
+              depth: 0,
+              id: (Math.random() * 1000).toString() ,
+              parent: null,
+              is_active: true,
+              updated_at: new Date().toString(),
+              reply_count: 0
+            };
+            addRoot(addedComment)
+          }
+          else {
+            const addedComment = {
+              display_name: name,
+              has_spoiler: hasSpoiler,
+              text: description,
+              created_at: new Date().toString(),
+              depth: 0,
+              id: (Math.random() * 1000).toString() ,
+              parent: null,
+              is_active: true,
+              updated_at: new Date().toString(),
+              reply_count: 0
+            };
+            addRoot(addedComment)
+        }
+        resetCommentBox()
+    }
+
+    function resetCommentBox () {
+        setName('')
+        setDescription('')
+        sethasSpoiler(false)
+    }
 
 
     return (
@@ -50,7 +95,10 @@ export default function AddComment({ hasCancel = false, cancelFn, parent } : IAd
                             </label>
 
                             <div className='justify-center items-center flex gap-5 w-full sm:w-auto'>
-                                <button className='button-base px-8 py-1 h-full flex-1/2'>{t('movie.submit-comment')}</button>
+                                <button
+                                    onClick={() => (parent && addComment) ? addComment(name, hasSpoiler, description) : addToRoot()}
+                                    className='button-base px-8 py-1 h-full flex-1/2'
+                                >{t('movie.submit-comment')}</button>
                                 {
                                     hasCancel ?
                                     <button onClick={cancelFn} className='button-base bg-error-light flex-1/2 h-full dark:bg-error-dark border-none px-8 py-1'>{t('movie.cancel-comment')}</button>

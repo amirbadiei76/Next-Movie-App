@@ -48,7 +48,8 @@
             "your-email": "ایمیل شما",
             "has-spoil": "دارای اسپویل",
             "comments": "دیدگاه ها",
-            "reply-to": "در پاسخ به "
+            "reply-to": "در پاسخ به ",
+            "reply-comment": "پاسخ به دیدگاه"
         },
         "auth": {
             "signin": "ورود",

@@ -108,7 +108,7 @@
 
 @utility button-base {
   @apply cursor-pointer font-roboto rtl:font-vazir rounded-md text-theme-black dark:text-theme-white bg-light-blue-second dark:bg-light-blue
-  border-light-blue-second dark:border-light-blue border-b-2 hover:border-b-dark-blue-second hover:dark:border-b-dark-blue
+  border-b-light-blue-second dark:border-b-light-blue border-b-2 hover:border-b-dark-blue-second hover:dark:border-b-dark-blue
 }
 
 @utility button-2-base {
@@ -120,6 +120,9 @@
   @apply font-roboto rtl:font-vazir rounded-md bg-light-blue-second dark:bg-light-blue-between border-b-2 border-light-blue-second dark:border-light-blue-between hover:border-dark-blue-second hover:dark:border-dark-blue-between
 }
 
+@utility button-input-base {
+  @apply input-base hover:bg-light-between-50 hover:dark:bg-dark-second-70 font-roboto rtl:font-vazir text-theme-black
+}
 
 @theme inline {
   --color-background: var(--background);

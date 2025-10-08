@@ -110,11 +110,10 @@ export default function LoginBox() {
                     </div>
                 </div>
                 <div className='relative w-full h-5 flex justify-center items-center'>
-                    {/* <div className='w-full h-full absolute left-0 top-0 bg-linear-to-l to-light-second dark:to-dark-between via-transparent from-light-second dark:from-dark-between'></div> */}
                     <hr className='h-[0.0625rem] bg-gradient-to-r from-transparent via-dark dark:via-light to-transparent border-0 w-full'/>
                     <label className='absolute top-1/2 -translate-y-1/2 bg-light-second from-40% to-60% text-theme-black dark:text-theme-white dark:bg-dark-between font-roboto rtl:font-vazir px-4'>{t('auth.or')}</label>
                 </div>
-                <button className='input-base hover:bg-light-between-50 hover:dark:bg-dark-second-70 font-roboto rtl:font-vazir text-theme-black flex justify-center gap-3 items-center dark:text-theme-white w-full py-2 cursor-pointer'>{<GoogleGLogo height={'1.75rem'} />} {t('auth.login-google')}</button>
+                <button className='button-input-base flex justify-center gap-3 items-center dark:text-theme-white w-full py-2 cursor-pointer'>{<GoogleGLogo height={'1.75rem'} />} {t('auth.login-google')}</button>
             </div>
         </form>
     )
