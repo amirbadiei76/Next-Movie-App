@@ -16,7 +16,7 @@ export default function MobileBottomBar() {
     const t = useTranslations("Movies")
 
     const isInAuth = () => {
-        return (pathname === ('/' + locale + '/send-email') || pathname === ('/' + locale + '/profile') || pathname === ('/' + locale + '/login') || pathname === ('/' + locale + '/signup') || pathname === ('/' + locale + '/forgot-password'))
+        return (pathname === ('/' + locale + '/send-email') || pathname === ('/' + locale + '/login') || pathname === ('/' + locale + '/signup') || pathname === ('/' + locale + '/forgot-password'))
     }
 
     const bottomItems = [

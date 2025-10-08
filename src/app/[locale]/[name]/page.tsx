@@ -35,6 +35,7 @@ import MovieRateContainer from '@/components/MovieRateContainer'
 import AddComment from '@/components/AddComment'
 import AllComments from '@/components/AllComments'
 import ShowMovieRate from '@/components/ShowMovieRate'
+import AddWatchList from '@/components/AddWatchList'
 
 interface IMovieDetailProps {
     params: Promise<{name: string, locale: string}>,
@@ -768,7 +769,10 @@ export default async function MovieDetail({params}: IMovieDetailProps) {
                         </div>
                         */}
 
-                        <MovieRateContainer movie={movie} />
+                        <div className='inline-flex mt-3 gap-4 flex-col sm:flex-row'>
+                            <MovieRateContainer movie={movie} />
+                            <AddWatchList movie={movie} />
+                        </div>
                     </div>
                 </div>
             </section>

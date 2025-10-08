@@ -12,6 +12,9 @@
     --error-dark: #ba062b;
     --error-light: #fa5358;
     
+    --error-dark-50: #bc062a80;
+    --error-light-50: #fa545a80;
+    
     
     /* light/dark */
     --light-theme: #cccccc;
@@ -132,6 +135,10 @@
 
   --color-error-dark: var(--error-dark);
   --color-error-light: var(--error-light);
+
+  
+  --color-error-dark-50: var(--error-dark-50);
+  --color-error-light-50: var(--error-light-50);
   
   /* light/dark */
   --color-light: var(--light-theme);

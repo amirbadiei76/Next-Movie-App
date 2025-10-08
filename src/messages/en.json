@@ -49,7 +49,8 @@
             "has-spoil": "Contains spoilers",
             "comments": "Comments",
             "reply-to": "Reply to ",
-            "reply-comment": "Reply to comment"
+            "reply-comment": "Reply to comment",
+            "add-watchlist": "Add to watchlist"
         },
         "auth": {
             "signin": "Login",
@@ -77,6 +78,15 @@
             "remember-me": "Remember me",
             "or": "Or",
             "email-used-error": "This email has already been used."
+        },
+        "profile": {
+            "dashboard": "Dashboard",
+            "watch-list": "Watch List",
+            "articles": "Articles",
+            "settings": "Settings",
+            "edit-info": "Edit Account",
+            "log-out": "Log Out"
+            
         }
     }
 }

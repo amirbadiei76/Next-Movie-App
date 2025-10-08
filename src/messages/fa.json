@@ -49,7 +49,8 @@
             "has-spoil": "دارای اسپویل",
             "comments": "دیدگاه ها",
             "reply-to": "در پاسخ به ",
-            "reply-comment": "پاسخ به دیدگاه"
+            "reply-comment": "پاسخ به دیدگاه",
+            "add-watchlist": "اضافه به لیست تماشا"
         },
         "auth": {
             "signin": "ورود",
@@ -77,6 +78,14 @@
             "remember-me": "مرا بخاطر بسپار",
             "or": "یا",
             "email-used-error": "این ایمیل قبلاً استفاده شده است."
+        },
+        "profile": {
+            "dashboard": "داشبورد",
+            "watch-list": "لیست تماشا",
+            "articles": "مقالات",
+            "settings": "تنظیمات",
+            "edit-info": "ویرایش اطلاعات",
+            "log-out": "خروج"
         }
     }
 }
