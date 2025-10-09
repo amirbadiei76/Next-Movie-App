@@ -24,6 +24,10 @@ export default function SearchBar() {
         return (pathname === ('/' + locale + '/send-email') || pathname === ('/' + locale + '/profile') || pathname === ('/' + locale + '/login') || pathname === ('/' + locale + '/signup') || pathname === ('/' + locale + '/forgot-password'))
     }
 
+    const isInProfile = () => {
+        return (pathname === ('/' + locale + '/profile') || pathname === ('/' + locale + '/profile/watch-list') || pathname === ('/' + locale + '/profile/articles') || pathname === ('/' + locale + '/profile/settings') || pathname === ('/' + locale + '/profile/edit-account'))
+    }
+
     useEffect(() => {
         document.addEventListener('click', handleClickOutside, true)
     }, [])
@@ -37,7 +41,7 @@ export default function SearchBar() {
 
     return (
         <div
-            className={`flex relativ justify-center items-center z-[2] ${isInAuth() ? 'hidden' : ''} `}
+            className={`flex relativ justify-center items-center z-[2] ${isInAuth() || isInProfile() ? 'hidden' : ''} `}
             ref={searchBarRef}
         >
             <div

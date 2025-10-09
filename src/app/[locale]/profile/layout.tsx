@@ -11,7 +11,7 @@ interface ILayoutProps {
 export default function Layout({children}: ILayoutProps) {
   return (
     <div >
-        <div className='bg-light dark:bg-dark flex transition-item-none py-8'>
+        <div className='bg-light dark:bg-dark flex flex-col sm:flex-row transition-item-none py-8'>
             {/* <Navbar /> */}
             <ProfileNavigator />
             {children}

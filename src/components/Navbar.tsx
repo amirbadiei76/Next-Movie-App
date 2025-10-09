@@ -75,6 +75,10 @@ export default function Navbar() {
         return (pathname === ('/' + locale + '/send-email') || pathname === ('/' + locale + '/login') || pathname === ('/' + locale + '/register') || pathname === ('/' + locale + '/forgot-password'))
     }
 
+    const isInProfile = () => {
+        return (pathname === ('/' + locale + '/profile') || pathname === ('/' + locale + '/profile/watch-list') || pathname === ('/' + locale + '/profile/articles') || pathname === ('/' + locale + '/profile/settings') || pathname === ('/' + locale + '/profile/edit-account'))
+    }
+
     return (
         //  bg-light dark:bg-dark
         //  bg-light dark:bg-dark transition-item-none
@@ -126,7 +130,7 @@ export default function Navbar() {
                     href={'/profile'}
                     ref={loginView}
                     className={`md:block hidden px-5 py-2 button-base
-                    ${isInAuth() ? 'md:hidden' : ''} 
+                    ${isInAuth() || isInProfile() ? 'md:hidden' : ''} 
                     ${locale === 'fa' ? 'font-vazir mr-3' : 'font-roboto ml-3'}`}
                 >
                     {t('nav.login')}

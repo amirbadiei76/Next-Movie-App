@@ -41,7 +41,7 @@ export default function MobileBottomBar() {
             id: 3,
             img: <ProfileIcon
                 height='1.25rem'
-                className='fill-theme-black dark:fill-theme-white'
+                className={` ${(pathname === '/' + locale + '/profile') ? 'fill-dark-blue-between dark:fill-light-blue-second' : 'fill-theme-black dark:fill-theme-white'}`}
             />,
             href: '/profile',
             title: t('nav.profile')
