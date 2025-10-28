@@ -107,14 +107,7 @@ export default function ProfileNavigator() {
 
     return (
         <div className={`flex flex-col sm:min-w-67.5 mx-8 sm:mx-0 gap-4 ${locale === 'fa' ? 'sm:rounded-tl-2xl sm:rounded-bl-2xl' : 'sm:rounded-tr-2xl sm:rounded-br-2xl'} sm:overflow-hidden px-0 sm:px-8 py-0 sm:py-8 sm:bg-light-second sm:dark:bg-dark-between`}>
-            <div className='flex justify-between sm:justify-baseline items-center gap-6'>
-                <div className='rounded-full flex justify-center items-end overflow-hidden border border-dark dark:border-light w-15 h-15'>
-                    {
-                        <ProfileIcon height='70%' className='h-full fill-dark dark:fill-light' />
-                    }
-                </div>
-                <p className='font-bold text-theme-black dark:text-theme-white textsm'>user_name</p>
-            </div>
+            
             <div className='hidden sm:flex flex-col gap-4'>
                 {
                     profileRoutes.map((item, index) => {
