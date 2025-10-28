@@ -11,7 +11,7 @@ export default function Profile() {
                         <ProfileIcon height='70%' className='h-full fill-dark dark:fill-light' />
                     }
                 </div>
-                <p className='font-bold text-theme-black dark:text-theme-white textsm'>user_name</p>
+                <h2 className='font-bold text-theme-black dark:text-theme-white textsm'>user_name</h2>
             </div>
         </main>
     )

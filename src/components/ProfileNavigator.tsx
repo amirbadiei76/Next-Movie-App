@@ -68,12 +68,7 @@ export default function ProfileNavigator() {
             link: '/profile/edit-account',
             image: <BiEdit height='1rem' className='text-2xl fill-theme-black dark:fill-theme-white' />
         },
-        {
-            id: 5,
-            title: t('profile.log-out'),
-            link: '/',
-            image: <BiLogOutCircle height='1rem' className='text-2xl fill-theme-black dark:fill-theme-white' />
-        }
+        
     ];
 
     const setProfileItem = (item: IProfileItem, isList: boolean) => {

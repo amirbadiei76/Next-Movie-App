@@ -80,8 +80,6 @@ export default function Navbar() {
     }
 
     return (
-        //  bg-light dark:bg-dark
-        //  bg-light dark:bg-dark transition-item-none
         <header
             className={`px-5 relative sm:px-10 lg:px-15 xl:px-20 transition-padding py-3 h-18 flex justify-between items-center bg-light dark:bg-dark transition-item-none`}
         >
@@ -135,6 +133,12 @@ export default function Navbar() {
                 >
                     {t('nav.login')}
                 </Link>
+                
+             {/* id: 5,
+             title: t('profile.log-out'),
+             link: '/',
+             image: <BiLogOutCircle height='1rem' className='text-2xl fill-theme-black dark:fill-theme-white' /> */}
+
 
                 <button
                     onClick={toggleTheme}
