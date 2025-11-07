@@ -1,15 +1,15 @@
 "use client"
 import Head from "next/head"
-import { useMovieContext } from '@/context/MovieContext';
+import { useMovieContext } from '@/src/context/MovieContext';
 import { redirect, useParams, usePathname } from 'next/navigation'
 import React, { useEffect, useRef, useState } from 'react'
 import { FaSearch } from 'react-icons/fa';
 import { FaMoon, FaRegMoon, FaRegSun, FaSun } from 'react-icons/fa6';
 import LocaleSwitcher from "./LocaleSwitcher";
 import { Locale, useLocale, useTranslations } from "next-intl";
-import {Link} from '@/i18n/navigation'
+import {Link} from '@/src/i18n/navigation'
 import SearchBar from "./SearchBar";
-import { useLocaleState, useSearchState, useThemeState } from "@/stores/StatesStore";
+import { useLocaleState, useSearchState, useThemeState } from "@/src/stores/StatesStore";
 // import Link from 'next/link'
 // import Container from './Container';
 // import { useShoppingCartContext } from '@/context/ShoppingCartContext';

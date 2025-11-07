@@ -1,6 +1,6 @@
 "use client"
 
-import { Link } from '@/i18n/navigation'
+import { Link } from '@/src/i18n/navigation'
 import { useLocale, useTranslations } from 'next-intl'
 import React, { use, useEffect, useRef, useState } from 'react'
 

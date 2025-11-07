@@ -1,41 +1,41 @@
 import React, { useEffect } from 'react'
-import dDark from '@/assets/images/d-dark.png'
-import betterCallSaul from '@/assets/images/better-call-saul.jpg'
-import breakingBad from '@/assets/images/breaking-bad.jpg'
-import got from '@/assets/images/game-of-thrones.jpg'
-import griselda from '@/assets/images/griselda.jpg'
-import penguin from '@/assets/images/penguin.jpg'
-import rickAndMorty from '@/assets/images/rick-and-morty.jpg'
-import shogun from '@/assets/images/shogun.jpg'
-import squidGame from '@/assets/images/squid-game.jpg'
-import succession from '@/assets/images/succession.jpg'
-import handsmaidTale from '@/assets/images/the-handsmaid-tale.jpg'
-import theStudio from '@/assets/images/the-studio.jpg'
-import theBear from '@/assets/images/the-bear.jpg'
+// import dDark from '@/assets/images/d-dark.png'
+// import betterCallSaul from '@/assets/images/better-call-saul.jpg'
+// import breakingBad from '@/assets/images/breaking-bad.jpg'
+// import got from '@/assets/images/game-of-thrones.jpg'
+// import griselda from '@/assets/images/griselda.jpg'
+// import penguin from '@/assets/images/penguin.jpg'
+// import rickAndMorty from '@/assets/images/rick-and-morty.jpg'
+// import shogun from '@/assets/images/shogun.jpg'
+// import squidGame from '@/assets/images/squid-game.jpg'
+// import succession from '@/assets/images/succession.jpg'
+// import handsmaidTale from '@/assets/images/the-handsmaid-tale.jpg'
+// import theStudio from '@/assets/images/the-studio.jpg'
+// import theBear from '@/assets/images/the-bear.jpg'
 
 import { FaClock, FaStar } from 'react-icons/fa6';
-import GenreItem from '@/components/GenreItem';
-import Container from '@/components/Container';
-import { convertDurationToHour, convertDurationToMinute } from '@/utils/Converter';
-import DownloadFilesDropDown from '@/components/DownloadFilesDropDown';
+import GenreItem from '@/src/components/GenreItem';
+import Container from '@/src/components/Container';
+import { convertDurationToHour, convertDurationToMinute } from '@/src/utils/Converter';
+import DownloadFilesDropDown from '@/src/components/DownloadFilesDropDown';
 import { getTranslations } from 'next-intl/server';
 import { FaHeart, FaRegClock } from 'react-icons/fa';
-import { IMDBIcon, MicIcon, SubIcon } from '@/components/SVGIcons';
+import { IMDBIcon, MicIcon, SubIcon } from '@/src/components/SVGIcons';
 import { SlCalender } from 'react-icons/sl';
 import { MdLanguage } from 'react-icons/md';
 import { SiTicktick } from 'react-icons/si';
 
-import cover from '@/assets/images/mobland_cover.jpg'
-import poster from '@/assets/images/mobland_poster.webp'
-import MovieDropdownItem from '@/components/MovieDropdownItem';
-import SiteFooter from '@/components/SiteFooter';
-import RelatedMovies from '@/components/RelatedMovies'
+// import cover from '@/assets/images/mobland_cover.jpg'
+// import poster from '@/assets/images/mobland_poster.webp'
+import MovieDropdownItem from '@/src/components/MovieDropdownItem';
+import SiteFooter from '@/src/components/SiteFooter';
+import RelatedMovies from '@/src/components/RelatedMovies'
 import { BiDislike, BiLike, BiSolidDislike, BiSolidLike } from 'react-icons/bi'
-import MovieRateContainer from '@/components/MovieRateContainer'
-import AddComment from '@/components/AddComment'
-import AllComments from '@/components/AllComments'
-import ShowMovieRate from '@/components/ShowMovieRate'
-import AddWatchList from '@/components/AddWatchList'
+import MovieRateContainer from '@/src/components/MovieRateContainer'
+import AddComment from '@/src/components/AddComment'
+import AllComments from '@/src/components/AllComments'
+import ShowMovieRate from '@/src/components/ShowMovieRate'
+import AddWatchList from '@/src/components/AddWatchList'
 
 interface IMovieDetailProps {
     params: Promise<{name: string, locale: string}>,
@@ -51,8 +51,8 @@ export default async function MovieDetail({params}: IMovieDetailProps) {
         title: 'Inception',
         description: 'Lorem ipsum dolor, sit amet vitae minus, ipsum voluptatum consequatur repudiandae. Suscipit culpa sunt asperiores rerum excepturi. Sunt id voluptas aliquam perspiciatis harum hic, quisquam maxime voluptatum eaque itaque? Est? 1',
         year: '2022',
-        poster: poster.src,
-        cover: cover.src,
+        poster: '/assets/images/mobland_poster.webp',
+        cover: '/assets/images/mobland_cover.jpg',
         hasSub: true,
         hasDub: true,
         liked: false,
@@ -440,7 +440,7 @@ export default async function MovieDetail({params}: IMovieDetailProps) {
                 title: 'Better Call Saul',
                 hasSub: false,
                 hasDub: true,
-                image: betterCallSaul.src
+                image: '/assets/images/better-call-saul.jpg'
             },
             {
                 id: '2',
@@ -449,7 +449,7 @@ export default async function MovieDetail({params}: IMovieDetailProps) {
                 title: 'Breaking Bad',
                 hasSub: true,
                 hasDub: true,
-                image: breakingBad.src
+                image: '/assets/images/breaking-bad.jpg'
             },
             {
                 id: '3',
@@ -458,7 +458,7 @@ export default async function MovieDetail({params}: IMovieDetailProps) {
                 title: 'Game of Throns',
                 hasSub: true,
                 hasDub: false,
-                image: got.src
+                image: '/assets/images/game-of-thrones.jpg'
             },
             {
                 id: '4',
@@ -467,7 +467,7 @@ export default async function MovieDetail({params}: IMovieDetailProps) {
                 title: 'Griselda',
                 hasSub: true,
                 hasDub: false,
-                image: griselda.src
+                image: '/assets/images/griselda.jpg'
             },
             {
                 id: '5',
@@ -476,7 +476,7 @@ export default async function MovieDetail({params}: IMovieDetailProps) {
                 title: 'The Penguin',
                 hasSub: true,
                 hasDub: true,
-                image: penguin.src
+                image: '/assets/images/penguin.jpg'
             },
             {
                 id: '6',
@@ -485,7 +485,7 @@ export default async function MovieDetail({params}: IMovieDetailProps) {
                 title: 'Rick and Morty',
                 hasSub: true,
                 hasDub: false,
-                image: rickAndMorty.src
+                image: '/assets/images/rick-and-morty.jpg'
             },
             {
                 id: '7',
@@ -494,7 +494,7 @@ export default async function MovieDetail({params}: IMovieDetailProps) {
                 title: 'Shōgun',
                 hasSub: true,
                 hasDub: false,
-                image: shogun.src
+                image: '/assets/images/shogun.jpg'
             },
             {
                 id: '8',
@@ -503,7 +503,7 @@ export default async function MovieDetail({params}: IMovieDetailProps) {
                 title: 'Squid Game',
                 hasSub: true,
                 hasDub: true,
-                image: squidGame.src
+                image: '/assets/images/squid-game.jpg'
             },
             {
                 id: '9',
@@ -512,7 +512,7 @@ export default async function MovieDetail({params}: IMovieDetailProps) {
                 title: 'Succession',
                 hasSub: true,
                 hasDub: false,
-                image: succession.src
+                image: '/assets/images/succession.jpg'
             },
             {
                 id: '10',
@@ -521,7 +521,7 @@ export default async function MovieDetail({params}: IMovieDetailProps) {
                 title: 'The Handmaid’s Tale The Handmaid’s Tale',
                 hasSub: true,
                 hasDub: false,
-                image: handsmaidTale.src
+                image: '/assets/images/succession.jpg'
             },
             {
                 id: '11',
@@ -530,7 +530,7 @@ export default async function MovieDetail({params}: IMovieDetailProps) {
                 title: 'The Studio',
                 hasSub: true,
                 hasDub: true,
-                image: theStudio.src
+                image: '/assets/images/the-studio.jpg'
             },
             {
                 id: '12',
@@ -539,7 +539,7 @@ export default async function MovieDetail({params}: IMovieDetailProps) {
                 title: 'The Bear',
                 hasSub: true,
                 hasDub: false,
-                image: theBear.src
+                image: '/assets/images/the-bear.jpg'
             },
         ],
         comments: {
@@ -782,7 +782,7 @@ export default async function MovieDetail({params}: IMovieDetailProps) {
                         rtl:font-vazir rtl:right-13 left-13 sm:rtl:right-20 sm:left-20 md:rtl:right-20 md:left-20 lg:rtl:right-33 lg:left-33 rtl:left-auto right-auto font-roboto`}
                     >{t('movie.full-details')}</strong>
                     <div className='border-[0.001rem] md:flex-row border-dark-second flex gap-4.5 flex-col dark:border-light-second p-8 rounded-md'>
-                        <video className='rounded-xl object-contain h-max md:w-1/2 w-full' poster={poster.src} controls preload="auto">
+                        <video className='rounded-xl object-contain h-max md:w-1/2 w-full' poster={movie.poster} controls preload="auto">
                             <source src="/Mobland_Trailer.mp4" type="video/mp4" />
                         </video>
                        

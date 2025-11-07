@@ -2,11 +2,11 @@
 import { useLocale, useTranslations } from 'next-intl'
 import React, { FormEvent, useEffect, useRef, useState } from 'react'
 import { BsEye, BsEyeSlash } from 'react-icons/bs'
-import { loginQuery } from '@/utils/FetchQueries'
+import { loginQuery } from '@/src/utils/FetchQueries'
 import { useMutation, useQuery } from '@tanstack/react-query'
-import { GoogleGLogo } from '@/components/SVGIcons';
+import { GoogleGLogo } from '@/src/components/SVGIcons';
 import { BiCheck } from 'react-icons/bi';
-import { Link } from '@/i18n/navigation';
+import { Link } from '@/src/i18n/navigation';
 
 export default function LoginBox() {
 

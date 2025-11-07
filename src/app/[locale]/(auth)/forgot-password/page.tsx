@@ -1,4 +1,4 @@
-import ForgotPasswordBox from '@/components/ForgotPasswordBox'
+import ForgotPasswordBox from '@/src/components/ForgotPasswordBox'
 import React from 'react'
 
 export default function ForgotPassword() {

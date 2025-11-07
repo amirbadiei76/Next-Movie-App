@@ -1,4 +1,4 @@
-import { Link } from '@/i18n/navigation'
+import { Link } from '@/src/i18n/navigation'
 import { getTranslations } from 'next-intl/server'
 import React from 'react'
 

@@ -1,12 +1,12 @@
 "use client"
-import { Link, useRouter } from '@/i18n/navigation'
+import { Link, useRouter } from '@/src/i18n/navigation'
 import { useLocale, useTranslations } from 'next-intl'
 import React, { FormEvent, useEffect, useRef, useState } from 'react'
 import { BiCheck } from 'react-icons/bi'
 import { BsEye, BsEyeSlash } from 'react-icons/bs'
 import { GoogleGLogo } from './SVGIcons'
 import { useMutation, useQuery } from '@tanstack/react-query'
-import { registerQuery } from '@/utils/FetchQueries'
+import { registerQuery } from '@/src/utils/FetchQueries'
 
 export default function RegisterBox() {
     
