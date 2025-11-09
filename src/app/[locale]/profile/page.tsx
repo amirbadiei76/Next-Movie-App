@@ -1,4 +1,4 @@
-import { ProfileIcon } from '@/src/components/SVGIcons'
+import { ProfileIcon } from '@/src/components/shared/svg-icons/SVGIcons'
 import React from 'react'
 
 export default function Profile() {

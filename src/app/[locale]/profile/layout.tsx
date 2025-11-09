@@ -1,6 +1,6 @@
-import MobileBottomBar from '@/components/MobileBottomBar'
-import ProfileNavigator from '@/components/ProfileNavigator'
-import SiteFooter from '@/components/SiteFooter'
+import MobileBottomBar from '@/src/components/shared/mobile-bottom-bar/MobileBottomBar'
+import ProfileNavigator from '@/src/components/not-shared/profile/navigator/ProfileNavigator'
+import SiteFooter from '@/src/components/shared/footer/SiteFooter'
 import React from 'react'
 // import Navbar from './Navbar'
 

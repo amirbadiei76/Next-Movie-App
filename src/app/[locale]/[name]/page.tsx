@@ -14,28 +14,28 @@ import React, { useEffect } from 'react'
 // import theBear from '@/assets/images/the-bear.jpg'
 
 import { FaClock, FaStar } from 'react-icons/fa6';
-import GenreItem from '@/src/components/GenreItem';
-import Container from '@/src/components/Container';
+import GenreItem from '@/src/components/not-shared/movie-details/genre-item/GenreItem';
+import Container from '@/src/components/shared/container/Container';
 import { convertDurationToHour, convertDurationToMinute } from '@/src/utils/Converter';
-import DownloadFilesDropDown from '@/src/components/DownloadFilesDropDown';
+import DownloadFilesDropDown from '@/src/components/not-shared/movie-details/download-dropdown/DownloadFilesDropDown';
 import { getTranslations } from 'next-intl/server';
 import { FaHeart, FaRegClock } from 'react-icons/fa';
-import { IMDBIcon, MicIcon, SubIcon } from '@/src/components/SVGIcons';
+import { IMDBIcon, MicIcon, SubIcon } from '@/src/components/shared/svg-icons/SVGIcons';
 import { SlCalender } from 'react-icons/sl';
 import { MdLanguage } from 'react-icons/md';
 import { SiTicktick } from 'react-icons/si';
 
 // import cover from '@/assets/images/mobland_cover.jpg'
 // import poster from '@/assets/images/mobland_poster.webp'
-import MovieDropdownItem from '@/src/components/MovieDropdownItem';
-import SiteFooter from '@/src/components/SiteFooter';
-import RelatedMovies from '@/src/components/RelatedMovies'
+import MovieDropdownItem from '@/src/components/not-shared/movie-details/movie-dropdown-item/MovieDropdownItem';
+import SiteFooter from '@/src/components/shared/footer/SiteFooter';
+import RelatedMovies from '@/src/components/not-shared/movie-details/related-movies/RelatedMovies'
 import { BiDislike, BiLike, BiSolidDislike, BiSolidLike } from 'react-icons/bi'
-import MovieRateContainer from '@/src/components/MovieRateContainer'
-import AddComment from '@/src/components/AddComment'
-import AllComments from '@/src/components/AllComments'
-import ShowMovieRate from '@/src/components/ShowMovieRate'
-import AddWatchList from '@/src/components/AddWatchList'
+import MovieRateContainer from '@/src/components/not-shared/movie-details/movie-like-dislike/MovieRateContainer'
+import AddComment from '@/src/components/shared/comments/add-comment/AddComment'
+import AllComments from '@/src/components/shared/comments/all-comments/AllComments'
+import ShowMovieRate from '@/src/components/not-shared/movie-details/movie-rate/ShowMovieRate'
+import AddWatchList from '@/src/components/not-shared/movie-details/add-watchlist/AddWatchList'
 
 interface IMovieDetailProps {
     params: Promise<{name: string, locale: string}>,

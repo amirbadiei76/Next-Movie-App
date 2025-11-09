@@ -1,4 +1,4 @@
-import LoginBox from '@/src/components/LoginBox'
+import LoginBox from '@/src/components/not-shared/login/LoginBox'
 import { Link } from '@/src/i18n/navigation'
 import { getQueryClient } from '@/src/utils/QueryClient'
 import { dehydrate, HydrationBoundary } from '@tanstack/react-query'

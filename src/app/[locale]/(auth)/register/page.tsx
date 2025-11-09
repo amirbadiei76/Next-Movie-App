@@ -1,4 +1,4 @@
-import RegisterBox from '@/src/components/RegisterBox'
+import RegisterBox from '@/src/components/not-shared/register/RegisterBox'
 import { Link } from '@/src/i18n/navigation'
 import { getQueryClient } from '@/src/utils/QueryClient'
 import { dehydrate, HydrationBoundary, QueryClient } from '@tanstack/react-query'
