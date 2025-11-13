@@ -16,7 +16,7 @@ export default async function SendEmail() {
                         <p className='font-roboto rtl:font-vazir text-theme-black dark:text-theme-white text-justify'>{t('auth.email-sended')}</p>
                         <p className='font-roboto rtl:font-vazir text-theme-black dark:text-theme-white text-justify'>{t('auth.email-not-send')}</p>
                         <button className='button-base px-3.5 py-1.5'>{t('auth.resend-email')}</button>
-                    </div>
+                    </div> 
                     <Link className='font-roboto rtl:font-vazir text-theme-black dark:text-theme-white' href={'/'}>{t('auth.back-home-page')}</Link>
                 </div>
             </Container>
