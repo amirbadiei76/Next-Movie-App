@@ -51,7 +51,7 @@ export default function RegisterBox() {
         <form
             onSubmit={submitRegister}
             className='flex overflow-hidden max-w-[32.5rem]
-                mx-8 sm:mx-0 px-8 sm:px-12 py-12 min-w-[90%] sm:min-w-130 
+                mx-8 md:mx-0 px-8 md:px-12 py-12 min-w-[100%] md:min-w-130 
                 justify-center items-center flex-col bg-light-second dark:bg-dark-between rounded-2xl'>
             
             <div className='flex flex-col gap-6 w-full'>
