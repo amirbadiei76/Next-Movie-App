@@ -1,4 +1,4 @@
-import MobileBottomBar from '@/components/MobileBottomBar'
+import MobileBottomBar from '@/src/components/shared/mobile-bottom-bar/MobileBottomBar';
 import React from 'react'
 // import Navbar from './Navbar'
 
