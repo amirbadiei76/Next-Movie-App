@@ -657,125 +657,134 @@ export default async function MovieDetail({params}: IMovieDetailProps) {
                 src={movie.poster}
                 className='w-full min-h-300 lg:min-h-190 absolute top-0 -z-10 object-cover pointer-events-none'
             />
+            <main className='w-full'>
+                <Container >
+                    <section className='min-h-135 pt-12 pb-10 backdrop-blur-lg before:content-[""] before:absolute before:inset-[3%] before:z-[-1] bg-radial to-58% from-transparent to-light dark:to-dark'>
+                        <div className='flex items-center h-auto lg:h-108 justify-center flex-col lg:flex-row'>
+                            <div className={`overflow-hidden h-full`}>
+                                <div className='relative h-full'>
+                                    <img
+                                        className='rounded-xl w-81 min-h-full object-cover pointer-events-none'
+                                        src={movie.cover}
+                                    /> 
+                                    <div className={`absolute top-4 rounded-full border dark:border-dark-second-70 border-light-second-70 bg-light-between-50 dark:bg-dark-between-50 w-9 h-9 z-[2] ${movie.hasSub ? 'flex justify-center items-center' : 'hidden'} ${locale === 'fa' ? 'left-4' : 'right-4'}`}>
+                                        <SubIcon
+                                            darkColor='#f2f2f2'
+                                            lightColor='#000033'
+                                        />
+                                    </div>
+                                    <div className={`absolute top-4 rounded-full border dark:border-dark-second-70 border-light-second-70 bg-light-between-50 dark:bg-dark-between-50 w-9 h-9 z-[2] ${movie.hasDub ? 'flex justify-center items-center' : 'hidden'} ${locale === 'fa' ? 'left-4' : 'right-4'} ${movie.hasSub && locale === 'fa' ? 'left-15' : 'right-15'}`}>
+                                        <MicIcon
+                                            darkTopColor='#d9d9d9' lightTopColor='#1a1a1a'
+                                            darkBottomColor='#f2f2f2' lightBottomColor='#000099'
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+                            <div className='flex flex-col min-h-full px-8 justify-between items-start flex-1 pt-4 lg:pt-0'>
+                                <div className='flex flex-col h-full w-full md:gap-0.5 lg:gap-2'>
+                                    <h2 className='font-bold text-4xl mb-3 tracking-wide text-theme-black dark:text-theme-white'>{movie.title}</h2>
+                                    <div className='flex md:gap-0 gap-2.5 md:items-center items-start mb-4 flex-col md:flex-row'>
+                                        
+                                        
+                                        <div className='flex justify-center items-center'>
+                                            <div className={`rounded-full h-10 gap-2.5 bg-light-blue-between dark:bg-other-blue-dark flex items-center px-5 ltr ${locale === 'fa' ? 'ml-6' : 'mr-6'}`}>
+                                                <IMDBIcon />
+                                                <strong className={`ml-1 text-lg text-theme-black dark:text-theme-white ${locale === 'fa' ? 'font-vazir' : 'font-roboto'}`}>{movie.ratings.imdb.rate}</strong>
+                                            </div>
+
+                                            <ShowMovieRate movie={movie} />
+                                        </div>
+                                        
+                                        <div className='inline-block translate-y-1'>
+                                            {
+                                                movie.genres.map((item, index) => {
+                                                    return (
+                                                        <GenreItem
+                                                            key={index}
+                                                            name={item}
+                                                            index={index}
+                                                        />
+                                                    )
+                                                })
+                                            }
+                                        </div>
+                                    </div>
+                                    <div className='flex flex-col gap-2 mb-4'>
+                                        <div className='w-max flex items-center gap-1.5 mb-3'>
+                                            <SiTicktick className='text-dark-blue-second dark:text-light-blue-between' />
+                                            <strong className={`text-theme-black dark:text-theme-white font-normal rtl:font-vazir font-roboto`}>New Episode or updates of a movie</strong>
+                                        </div>
+
+                                        <div className='flex items-center gap-1.5'>
+                                            <i className="bi bi-people text-theme-black dark:text-theme-white"></i>
+                                            <strong className={`text-theme-black dark:text-theme-white font-normal rtl:font-vazir font-roboto`}>{t('movie.starring')}:</strong>
+                                            <div className='inline-block'>
+                                                {
+                                                    movie.actors.map((actor, index) => {
+                                                        return (
+                                                            <div key={index} className='inline-block text-theme-black dark:text-theme-white mx-1'>
+                                                                {locale === 'fa' && index != 0 ? ' ,' : ''}
+                                                                <strong className='font-normal text-sm text-theme-black dark:text-theme-white hover:cursor-pointer hover:text-dark-darker hover:dark:text-light-second'>{actor}</strong>
+                                                                {locale !== 'fa' && index != movie.actors.length - 1 ? ', ' : ''}
+                                                            </div>
+                                                        )
+                                                    })
+                                                }
+                                            </div>
+                                        </div>
+
+                                        <div className='flex items-center gap-1.5'>
+                                            {/* <FaClock size={18} /> */}
+                                            <i className="bi bi-megaphone text-theme-black dark:text-theme-white"></i>
+                                            <strong className={`text-theme-black dark:text-theme-white font-normal rtl:font-vazir font-roboto`}>{t('movie.director')}:</strong>
+                                            <div className='inline-block'>
+                                                {
+                                                    movie.directors.map((director, index) => {
+                                                        return (
+                                                            <div key={index} className='inline-block text-theme-black dark:text-theme-white mx-1'>
+                                                                {locale === 'fa' && index != 0 ? ' ,' : ''}
+                                                                <strong className='font-normal text-sm text-theme-black dark:text-theme-white hover:cursor-pointer hover:text-dark-darker hover:dark:text-light-second'>{director}</strong>
+                                                                {locale !== 'fa' && index != movie.directors.length - 1 ? ', ' : ''}
+                                                            </div>
+                                                        )
+                                                    })
+                                                }
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                {/* <div className={`mb-5 rtl:pl-19 rtl:pr-0 pl-0 pr-19`}>
+                                    
+                                </div> */}
+                                {/*
+                                <div className={`flex items-center`}>
+                                    <button 
+                                        className={`relative cursor-pointer flex items-center px-5 py-3 gap-2 rounded-lg bg-light-blue-second dark:bg-light-blue text-theme-black dark:text-theme-white
+                                            border-light-blue-second dark:border-light-blue border-b-2 hover:border-b-dark-blue-second hover:dark:border-b-dark-blue
+                                            rtl:font-vazir font-roboto`}
+                                    >
+                                        <FaVideo />
+                                        {t('movie.watch-trailer')}
+                                    </button>
+                                </div>
+                                */}
+
+                                <div className='inline-flex mt-3 gap-4 flex-col sm:flex-row'>
+                                    <MovieRateContainer movie={movie} />
+                                    <AddWatchList movie={movie} />
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section>
+                        
+                    </section>
+                </Container>
+            </main>
             {/* <div className='w-full h-140 top-0 absolute backdrop-blur-lg bg-radial to-30% from-transparent to-light dark:to-dark z-[-3]'></div> */}
-            <section className='w-full min-h-135 pt-12 pb-10 backdrop-blur-lg before:content-[""] before:absolute before:inset-[3%] before:z-[-1] bg-radial to-58% from-transparent to-light dark:to-dark'>
-                <div className='flex items-center h-auto lg:h-108 justify-center flex-col lg:flex-row'>
-                    <div className={`overflow-hidden h-full lg:rtl:pr-25 lg:rtl:pl-0 lg:pl-25 lg:pr-0`}>
-                        <div className='relative h-full'>
-                            <img
-                                className='rounded-xl w-81 min-h-full object-cover pointer-events-none'
-                                src={movie.cover}
-                            /> 
-                            <div className={`absolute top-4 rounded-full border dark:border-dark-second-70 border-light-second-70 bg-light-between-50 dark:bg-dark-between-50 w-9 h-9 z-[2] ${movie.hasSub ? 'flex justify-center items-center' : 'hidden'} ${locale === 'fa' ? 'left-4' : 'right-4'}`}>
-                                <SubIcon
-                                    darkColor='#f2f2f2'
-                                    lightColor='#000033'
-                                />
-                            </div>
-                            <div className={`absolute top-4 rounded-full border dark:border-dark-second-70 border-light-second-70 bg-light-between-50 dark:bg-dark-between-50 w-9 h-9 z-[2] ${movie.hasDub ? 'flex justify-center items-center' : 'hidden'} ${locale === 'fa' ? 'left-4' : 'right-4'} ${movie.hasSub && locale === 'fa' ? 'left-15' : 'right-15'}`}>
-                                <MicIcon
-                                    darkTopColor='#d9d9d9' lightTopColor='#1a1a1a'
-                                    darkBottomColor='#f2f2f2' lightBottomColor='#000099'
-                                />
-                            </div>
-                        </div>
-                    </div>
-                    <div className='flex flex-col min-h-full px-8 justify-between items-start flex-1 pt-4 lg:pt-0'>
-                        <div className='flex flex-col h-full w-full md:gap-0.5 lg:gap-2'>
-                            <h2 className='font-bold text-4xl mb-3 tracking-wide text-theme-black dark:text-theme-white'>{movie.title}</h2>
-                            <div className='flex md:gap-0 gap-2.5 md:items-center items-start mb-4 flex-col md:flex-row'>
-                                
-                                
-                                <div className='flex justify-center items-center'>
-                                    <div className={`rounded-full h-10 gap-2.5 bg-light-blue-between dark:bg-other-blue-dark flex items-center px-5 ltr ${locale === 'fa' ? 'ml-6' : 'mr-6'}`}>
-                                        <IMDBIcon />
-                                        <strong className={`ml-1 text-lg text-theme-black dark:text-theme-white ${locale === 'fa' ? 'font-vazir' : 'font-roboto'}`}>{movie.ratings.imdb.rate}</strong>
-                                    </div>
-
-                                    <ShowMovieRate movie={movie} />
-                                </div>
-                                
-                                <div className='inline-block translate-y-1'>
-                                    {
-                                        movie.genres.map((item, index) => {
-                                            return (
-                                                <GenreItem
-                                                    key={index}
-                                                    name={item}
-                                                    index={index}
-                                                />
-                                            )
-                                        })
-                                    }
-                                </div>
-                            </div>
-                            <div className='flex flex-col gap-2 mb-4'>
-                                <div className='w-max flex items-center gap-1.5 mb-3'>
-                                    <SiTicktick className='text-dark-blue-second dark:text-light-blue-between' />
-                                    <strong className={`text-theme-black dark:text-theme-white font-normal rtl:font-vazir font-roboto`}>New Episode or updates of a movie</strong>
-                                </div>
-
-                                <div className='flex items-center gap-1.5'>
-                                    <i className="bi bi-people text-theme-black dark:text-theme-white"></i>
-                                    <strong className={`text-theme-black dark:text-theme-white font-normal rtl:font-vazir font-roboto`}>{t('movie.starring')}:</strong>
-                                    <div className='inline-block'>
-                                        {
-                                            movie.actors.map((actor, index) => {
-                                                return (
-                                                    <div key={index} className='inline-block text-theme-black dark:text-theme-white mx-1'>
-                                                        {locale === 'fa' && index != 0 ? ' ,' : ''}
-                                                        <strong className='font-normal text-sm text-theme-black dark:text-theme-white hover:cursor-pointer hover:text-dark-darker hover:dark:text-light-second'>{actor}</strong>
-                                                        {locale !== 'fa' && index != movie.actors.length - 1 ? ', ' : ''}
-                                                    </div>
-                                                )
-                                            })
-                                        }
-                                    </div>
-                                </div>
-
-                                <div className='flex items-center gap-1.5'>
-                                    {/* <FaClock size={18} /> */}
-                                    <i className="bi bi-megaphone text-theme-black dark:text-theme-white"></i>
-                                    <strong className={`text-theme-black dark:text-theme-white font-normal rtl:font-vazir font-roboto`}>{t('movie.director')}:</strong>
-                                    <div className='inline-block'>
-                                        {
-                                            movie.directors.map((director, index) => {
-                                                return (
-                                                    <div key={index} className='inline-block text-theme-black dark:text-theme-white mx-1'>
-                                                        {locale === 'fa' && index != 0 ? ' ,' : ''}
-                                                        <strong className='font-normal text-sm text-theme-black dark:text-theme-white hover:cursor-pointer hover:text-dark-darker hover:dark:text-light-second'>{director}</strong>
-                                                        {locale !== 'fa' && index != movie.directors.length - 1 ? ', ' : ''}
-                                                    </div>
-                                                )
-                                            })
-                                        }
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        {/* <div className={`mb-5 rtl:pl-19 rtl:pr-0 pl-0 pr-19`}>
-                            
-                        </div> */}
-                        {/*
-                        <div className={`flex items-center`}>
-                            <button 
-                                className={`relative cursor-pointer flex items-center px-5 py-3 gap-2 rounded-lg bg-light-blue-second dark:bg-light-blue text-theme-black dark:text-theme-white
-                                    border-light-blue-second dark:border-light-blue border-b-2 hover:border-b-dark-blue-second hover:dark:border-b-dark-blue
-                                    rtl:font-vazir font-roboto`}
-                            >
-                                <FaVideo />
-                                {t('movie.watch-trailer')}
-                            </button>
-                        </div>
-                        */}
-
-                        <div className='inline-flex mt-3 gap-4 flex-col sm:flex-row'>
-                            <MovieRateContainer movie={movie} />
-                            <AddWatchList movie={movie} />
-                        </div>
-                    </div>
-                </div>
-            </section>
+            
             <main className='bg-light dark:bg-dark transition-item-none transition-color transition-padding '>
                 <div className='relative lg:px-25 md:px-10 sm:px-10 px-5 py-4 pb-8'>
                     <strong className={`pointer-events-none text-dark text-lg tracking-wider transition-padding dark:text-light absolute bg-light dark:bg-dark px-3 top-0.5 transition-item-none

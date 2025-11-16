@@ -84,7 +84,7 @@ export default function Navbar() {
         //     className={`relative transition-padding py-3 h-18 flex justify-between items-center bg-light dark:bg-dark transition-item-none`}
         
         <header
-            className=" bg-light dark:bg-dark transition-item-none"
+            className="bg-light dark:bg-dark transition-item-none"
         >
             <Container >
                 <div 
