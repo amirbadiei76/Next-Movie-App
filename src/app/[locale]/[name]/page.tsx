@@ -657,9 +657,15 @@ export default async function MovieDetail({params}: IMovieDetailProps) {
                 src={movie.poster}
                 className='w-full min-h-300 lg:min-h-190 absolute top-0 -z-10 object-cover pointer-events-none'
             />
+            <span
+            className='w-full absolute min-h-280 sm:min-h-250 md:min-h-240 lg:min-h-160 top-0 z-[-9] backdrop-blur-lg before:content-[""] before:absolute before:inset-[3%] before:z-[-1] bg-radial to-58% from-transparent to-light dark:to-dark'
+            />
+            {/*
+            backdrop-blur-lg before:content-[""] before:absolute before:inset-[3%] before:z-[-1] bg-radial to-58% from-transparent to-light dark:to-dark
+            */}
             <main className='w-full'>
                 <Container >
-                    <section className='min-h-135 pt-12 pb-10 backdrop-blur-lg before:content-[""] before:absolute before:inset-[3%] before:z-[-1] bg-radial to-58% from-transparent to-light dark:to-dark'>
+                    <section className='min-h-135 pt-12 pb-10 before:bg-amber-400 before:w-full before:h-full'>
                         <div className='flex items-center h-auto lg:h-108 justify-center flex-col lg:flex-row'>
                             <div className={`overflow-hidden h-full`}>
                                 <div className='relative h-full'>
@@ -681,7 +687,7 @@ export default async function MovieDetail({params}: IMovieDetailProps) {
                                     </div>
                                 </div>
                             </div>
-                            <div className='flex flex-col min-h-full px-8 justify-between items-start flex-1 pt-4 lg:pt-0'>
+                            <div className='flex flex-col w-full lg:w-auto min-h-full px-0 lg:px-8 justify-between items-start flex-1 pt-4 lg:pt-0'>
                                 <div className='flex flex-col h-full w-full md:gap-0.5 lg:gap-2'>
                                     <h2 className='font-bold text-4xl mb-3 tracking-wide text-theme-black dark:text-theme-white'>{movie.title}</h2>
                                     <div className='flex md:gap-0 gap-2.5 md:items-center items-start mb-4 flex-col md:flex-row'>
