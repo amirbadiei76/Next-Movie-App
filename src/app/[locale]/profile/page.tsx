@@ -1,10 +1,9 @@
 import MainInfoContainer from '@/src/components/not-shared/profile/dashboard/main-info-container/MainInfoContainer'
-import { ProfileIcon } from '@/src/components/shared/svg-icons/SVGIcons'
 import React from 'react'
 
 export default function Profile() {
     return (
-        <main className='mx-8'>
+        <main className='rtl:pr-67.5 rtl:pl-0 pl-67.5 pr-0'>
             <MainInfoContainer />
         </main>
     )

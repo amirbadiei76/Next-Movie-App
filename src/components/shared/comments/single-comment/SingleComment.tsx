@@ -124,7 +124,7 @@ export default function SingleComment({ comment, isReply, parent, onAddReply }: 
   return (
     <div className={`flex flex-col flex-1 gap-4 relative ${(isReply && parent && (parent?.depth <= 1 && comment.depth <= 2)) ? 'mr-8' : ''} `}>
       <div className={`relative w-full flex gap-4 flex-col sm:flex-row items-start py-4 px-10 bg-light-between dark:bg-dark-between rounded-lg`}>
-          <div className='flex flex-col flex-1 gap-2'>
+          <div className='flex w-full flex-col flex-1 gap-2'>
             {
               parent ?
               <p className='text-theme-black dark:text-theme-white font-roboto rtl:font-vazir'>{t('movie.reply-to')} {parent?.display_name}</p>

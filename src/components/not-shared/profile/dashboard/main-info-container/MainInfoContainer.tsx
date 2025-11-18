@@ -7,7 +7,7 @@ export default async function MainInfoContainer() {
     const t = await getTranslations("Movies");
 
     return (
-        <div className='flex flex-col mt-4 sm:mt-0 md:flex-row w-full justify-between items-center gap-6 p-8 bg-light-second dark:bg-dark-between h-fit rounded-lg'>
+        <div className='flex flex-col sm:mt-0 md:flex-row w-full justify-between items-center gap-6 p-8 bg-light-second dark:bg-dark-between h-fit rounded-lg'>
             <div className='flex items-center gap-4 flex-col md:flex-row'>
                 <div className='md:flex-0.3 rounded-full flex justify-center items-end overflow-hidden border border-dark dark:border-light w-25 h-25'>
                     <ProfileIcon height='70%' className='h-full fill-dark dark:fill-light' />

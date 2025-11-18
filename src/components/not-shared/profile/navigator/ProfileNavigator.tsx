@@ -101,7 +101,7 @@ export default function ProfileNavigator() {
 
 
     return (
-        <div className={`flex flex-col sm:min-w-67.5 mx-8 sm:mx-0 gap-4 ${locale === 'fa' ? 'sm:rounded-tl-2xl sm:rounded-bl-2xl' : 'sm:rounded-tr-2xl sm:rounded-br-2xl'} sm:overflow-hidden px-0 sm:px-8 py-0 sm:py-8 sm:bg-light-second sm:dark:bg-dark-between`}>
+        <aside className={`sm:fixed flex flex-col sm:min-w-67.5 gap-4 ${locale === 'fa' ? 'sm:rounded-tl-2xl sm:rounded-bl-2xl sm:right-0 sm:left-auto' : 'sm:rounded-tr-2xl sm:rounded-br-2xl sm:left-0 sm:right-auto'} sm:overflow-hidden px-0 sm:px-8 py-0 sm:py-8 sm:bg-light-second sm:dark:bg-dark-between`}>
             
             <div className='hidden sm:flex flex-col gap-4'>
                 {
@@ -122,7 +122,7 @@ export default function ProfileNavigator() {
 
 
             <div
-                className='flex sm:hidden rounded-lg relative bg-light-second dark:bg-dark-between hover:cursor-pointer sm:rounded-none sm:bg-transparent'
+                className='flex sm:hidden rounded-lg relative bg-light-second dark:bg-dark-between hover:cursor-pointer sm:rounded-none sm:bg-transparent border border-dark-second dark:border-dark-second sm:border-none'
                 >
                 <div
                     // onClick={() => setShowProfileItems(show => !show)}
@@ -137,7 +137,7 @@ export default function ProfileNavigator() {
                 
                 <div
                     style={{visibility: showProfileItems ? 'visible' : 'hidden', opacity: showProfileItems ? 1 : 0}} 
-                    className='flex flex-col w-full overflow-hidden absolute top-[120%] sm:hidden bg-light-second dark:bg-dark-between rounded-lg hover:cursor-pointer sm:rounded-none sm:bg-transparent'
+                    className='flex flex-col w-full border border-dark-second dark:border-dark-second overflow-hidden absolute top-[120%] sm:hidden bg-light-second dark:bg-dark-between rounded-lg hover:cursor-pointer sm:rounded-none sm:bg-transparent'
                 >
                     {
                         profileRoutes
@@ -149,6 +149,6 @@ export default function ProfileNavigator() {
             </div>
 
             
-        </div>
+        </aside>
     )
 }
