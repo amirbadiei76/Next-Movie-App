@@ -49,7 +49,7 @@ export default function AllComments({ comments }: { comments: FullComments }) {
     return (
         <div className='flex flex-col'>
             <AddComment comments={comments.results} addRoot={addToArray} />
-            <div className='flex gap-4 flex-col rouned-md lg:px-25 md:px-10 sm:px-10 px-5 py-4 pb-8'>
+            <div className='flex gap-4 flex-col rouned-md py-4 pb-8'>
                 <strong className='font-roboto rtl:font-vazir text-dark dark:text-light pointer-events-none text-lg tracking-wider'>{t('movie.comments')} ({ commentCounts })</strong>
                 {showComments()}
             </div>

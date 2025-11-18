@@ -521,7 +521,7 @@ export default async function MovieDetail({params}: IMovieDetailProps) {
                 title: 'The Handmaid’s Tale The Handmaid’s Tale',
                 hasSub: true,
                 hasDub: false,
-                image: '/assets/images/succession.jpg'
+                image: '/assets/images/the-handsmaid-tale.jpg'
             },
             {
                 id: '11',
@@ -657,15 +657,19 @@ export default async function MovieDetail({params}: IMovieDetailProps) {
                 src={movie.poster}
                 className='w-full min-h-300 lg:min-h-190 absolute top-0 -z-10 object-cover pointer-events-none'
             />
-            <span
+            {/* <span
             className='w-full absolute min-h-280 sm:min-h-250 md:min-h-240 lg:min-h-160 top-0 z-[-9] backdrop-blur-lg before:content-[""] before:absolute before:inset-[3%] before:z-[-1] bg-radial to-58% from-transparent to-light dark:to-dark'
-            />
+            /> */}
             {/*
             backdrop-blur-lg before:content-[""] before:absolute before:inset-[3%] before:z-[-1] bg-radial to-58% from-transparent to-light dark:to-dark
             */}
+            {/* <Container > */}
             <main className='w-full'>
-                <Container >
-                    <section className='min-h-135 pt-12 pb-10 before:bg-amber-400 before:w-full before:h-full'>
+                <section
+                    className='min-h-135 pt-12 pb-10 
+                    backdrop-blur-lg before:content-[""] before:absolute before:inset-[3%] before:z-[-1] bg-radial to-58% from-transparent to-light dark:to-dark'
+                >
+                    <Container >
                         <div className='flex items-center h-auto lg:h-108 justify-center flex-col lg:flex-row'>
                             <div className={`overflow-hidden h-full`}>
                                 <div className='relative h-full'>
@@ -782,124 +786,135 @@ export default async function MovieDetail({params}: IMovieDetailProps) {
                                 </div>
                             </div>
                         </div>
-                    </section>
+                    </Container>
+                </section>
 
-                    <section>
-                        
-                    </section>
-                </Container>
-            </main>
-            {/* <div className='w-full h-140 top-0 absolute backdrop-blur-lg bg-radial to-30% from-transparent to-light dark:to-dark z-[-3]'></div> */}
-            
-            <main className='bg-light dark:bg-dark transition-item-none transition-color transition-padding '>
-                <div className='relative lg:px-25 md:px-10 sm:px-10 px-5 py-4 pb-8'>
-                    <strong className={`pointer-events-none text-dark text-lg tracking-wider transition-padding dark:text-light absolute bg-light dark:bg-dark px-3 top-0.5 transition-item-none
-                        rtl:font-vazir rtl:right-13 left-13 sm:rtl:right-20 sm:left-20 md:rtl:right-20 md:left-20 lg:rtl:right-33 lg:left-33 rtl:left-auto right-auto font-roboto`}
-                    >{t('movie.full-details')}</strong>
-                    <div className='border-[0.001rem] md:flex-row border-dark-second flex gap-4.5 flex-col dark:border-light-second p-8 rounded-md'>
-                        <video className='rounded-xl object-contain h-max md:w-1/2 w-full' poster={movie.poster} controls preload="auto">
-                            <source src="/Mobland_Trailer.mp4" type="video/mp4" />
-                        </video>
-                       
-                        <div className='flex flex-1/2 flex-col gap-2 justify-between'>
-                            <div className='flex gap-2 flex-col'>
-                                <div className='flex items-center gap-1.5'>
-                                    <FaRegClock className='text-theme-black dark:text-theme-white' />
-                                    <strong className={`text-theme-black dark:text-theme-white font-normal rtl:font-vazir font-roboto`}>{t('movie.duration')}:&nbsp;{hour}{locale === 'fa' ? ' ' : ''}{t('movie.hour')}{locale === 'fa' ? ' و ' : ' '}{minute}{locale === 'fa' ? ' ' : ''}{t('movie.minute')}</strong>
-                                </div>
+                <div className='bg-light dark:bg-dark transition-item-none transition-padding transition-margin transition-color'>
+                    <Container >
+                        <section className='relative py-4 pb-8'>
+                            <strong className={`pointer-events-none text-dark text-lg tracking-wider transition-padding dark:text-light absolute bg-light dark:bg-dark px-3 top-0.5 transition-item-none
+                                rtl:font-vazir rtl:right-13 left-13 sm:rtl:right-20 sm:left-20 md:rtl:right-20 md:left-20 lg:rtl:right-33 lg:left-33 rtl:left-auto right-auto font-roboto`}
+                            >{t('movie.full-details')}</strong>
+                            <div className='border-[0.001rem] md:flex-row border-dark-second flex gap-4.5 flex-col dark:border-light-second p-8 rounded-md'>
+                                <video className='rounded-xl object-contain h-max md:w-1/2 w-full' poster={movie.poster} controls preload="auto">
+                                    <source src="/Mobland_Trailer.mp4" type="video/mp4" />
+                                </video>
+                            
+                                <div className='flex flex-1/2 flex-col gap-2 justify-between'>
+                                    <div className='flex gap-2 flex-col'>
+                                        <div className='flex items-center gap-1.5'>
+                                            <FaRegClock className='text-theme-black dark:text-theme-white' />
+                                            <strong className={`text-theme-black dark:text-theme-white font-normal rtl:font-vazir font-roboto`}>{t('movie.duration')}:&nbsp;{hour}{locale === 'fa' ? ' ' : ''}{t('movie.hour')}{locale === 'fa' ? ' و ' : ' '}{minute}{locale === 'fa' ? ' ' : ''}{t('movie.minute')}</strong>
+                                        </div>
 
-                                <div className='flex items-center gap-1.5'>
-                                    <SlCalender className='text-theme-black dark:text-theme-white' />
-                                    <strong className={`text-theme-black dark:text-theme-white font-normal rtl:font-vazir font-roboto`}>{t('movie.year')}:&nbsp;{movie.year}</strong>
-                                </div>
+                                        <div className='flex items-center gap-1.5'>
+                                            <SlCalender className='text-theme-black dark:text-theme-white' />
+                                            <strong className={`text-theme-black dark:text-theme-white font-normal rtl:font-vazir font-roboto`}>{t('movie.year')}:&nbsp;{movie.year}</strong>
+                                        </div>
 
-                                <div className='flex items-center gap-1.5'>
-                                    <MdLanguage className="text-base text-theme-black dark:text-theme-white" />
-                                    <strong className={`text-theme-black dark:text-theme-white font-normal rtl:font-vazir font-roboto`}>{t('movie.lang')}:&nbsp;{movie.language.map((lang, index) => <strong key={index} className='font-normal'>{lang}{index != movie.language.length - 1 ? ', ' : ''}</strong>)}</strong>
+                                        <div className='flex items-center gap-1.5'>
+                                            <MdLanguage className="text-base text-theme-black dark:text-theme-white" />
+                                            <strong className={`text-theme-black dark:text-theme-white font-normal rtl:font-vazir font-roboto`}>{t('movie.lang')}:&nbsp;{movie.language.map((lang, index) => <strong key={index} className='font-normal'>{lang}{index != movie.language.length - 1 ? ', ' : ''}</strong>)}</strong>
+                                        </div>
+                                    </div>
+                                    <p
+                                        className={`text-theme-black dark:text-theme-white rtl:font-vazir font-roboto mb-2`}>{t('movie.summary')}:&nbsp;{movie.description}</p>
                                 </div>
                             </div>
-                            <p
-                                className={`text-theme-black dark:text-theme-white rtl:font-vazir font-roboto mb-2`}>{t('movie.summary')}:&nbsp;{movie.description}</p>
-                        </div>
-                    </div>
 
+                        </section>
+
+                        <section className='relative py-4 pb-8'>
+                            <strong className={`pointer-events-none text-dark text-lg tracking-wider transition-padding dark:text-light absolute bg-light dark:bg-dark px-3 top-0.5 transition-item-none
+                                rtl:font-vazir rtl:right-13 left-13 sm:rtl:right-20 sm:left-20 md:rtl:right-20 md:left-20 lg:rtl:right-33 lg:left-33 rtl:left-auto right-auto font-roboto`}
+                            >{t('movie.download-links')}</strong>
+
+                            <div className='border-[0.001rem] border-dark-second flex gap-4.5 flex-col dark:border-light-second p-8 rounded-md'>
+                                {
+                                    movie.isMovie ?
+                                    <>
+                                        {   movie.original_link ?
+                                            <MovieDropdownItem
+                                                movieType='origin'
+                                                links={movie.original_link}    
+                                            /> 
+                                            : null
+                                        }
+                                        {   movie.sub_link ?
+                                            <MovieDropdownItem
+                                                movieType='sub'
+                                                links={movie.dub_link}  
+                                            /> 
+                                            : null
+                                        }
+                                        {   movie.dub_link ?
+                                            <MovieDropdownItem
+                                                movieType='dub'
+                                                links={movie.dub_link}  
+                                            />
+                                            : null
+                                        } 
+                                    </> :
+                                    <>
+                                        {
+                                            movie.original_links ?
+                                            <DownloadFilesDropDown
+                                                movieType={`origin`}
+                                                links={movie.original_links}
+                                                title={t('movie.s1')}
+                                            />
+                                            : null
+                                        }
+
+                                        {
+                                            movie.sub_links ?
+                                            <DownloadFilesDropDown
+                                                movieType={`sub`}
+                                                links={movie.sub_links}
+                                                title={t('movie.s1')}
+                                            />
+                                            : null
+                                        }
+
+                                        {
+                                            movie.dub_links ?
+                                            <DownloadFilesDropDown
+                                                movieType={'dub'}
+                                                links={movie.dub_links}
+                                                title={t('movie.s1')}
+                                            />
+                                            : null
+                                        }
+                                    </>
+                                }
+                            </div>
+                        </section>
+
+                        <section className=''>
+                            <strong className='font-roboto rtl:font-vazir text-dark dark:text-light pointer-events-none text-lg tracking-wider'>{movie.isMovie ? t('movie.related-movies') : t('movie.related-series')}</strong>
+                            
+                                
+                            <RelatedMovies
+                                relatedMovies={movie.related}
+                            />
+                        </section>
+
+                        <section>
+                            <AllComments comments={movie.comments} />
+                        </section>
+                    </Container>
                 </div>
-                <div className='relative lg:px-25 md:px-10 sm:px-10 px-5 py-4 pb-8'>
-                    <strong className={`pointer-events-none text-dark text-lg tracking-wider transition-padding dark:text-light absolute bg-light dark:bg-dark px-3 top-0.5 transition-item-none
-                        rtl:font-vazir rtl:right-13 left-13 sm:rtl:right-20 sm:left-20 md:rtl:right-20 md:left-20 lg:rtl:right-33 lg:left-33 rtl:left-auto right-auto font-roboto`}
-                    >{t('movie.download-links')}</strong>
-
-                    <div className='border-[0.001rem] border-dark-second flex gap-4.5 flex-col dark:border-light-second p-8 rounded-md'>
-                        {
-                            movie.isMovie ?
-                            <>
-                                {   movie.original_link ?
-                                    <MovieDropdownItem
-                                        movieType='origin'
-                                        links={movie.original_link}    
-                                    /> 
-                                    : null
-                                }
-                                {   movie.sub_link ?
-                                    <MovieDropdownItem
-                                        movieType='sub'
-                                        links={movie.dub_link}  
-                                    /> 
-                                    : null
-                                }
-                                {   movie.dub_link ?
-                                    <MovieDropdownItem
-                                        movieType='dub'
-                                        links={movie.dub_link}  
-                                    />
-                                    : null
-                                } 
-                            </> :
-                            <>
-                                {
-                                    movie.original_links ?
-                                    <DownloadFilesDropDown
-                                        movieType={`origin`}
-                                        links={movie.original_links}
-                                        title={t('movie.s1')}
-                                    />
-                                    : null
-                                }
-
-                                {
-                                    movie.sub_links ?
-                                    <DownloadFilesDropDown
-                                        movieType={`sub`}
-                                        links={movie.sub_links}
-                                        title={t('movie.s1')}
-                                    />
-                                    : null
-                                }
-
-                                {
-                                    movie.dub_links ?
-                                    <DownloadFilesDropDown
-                                        movieType={'dub'}
-                                        links={movie.dub_links}
-                                        title={t('movie.s1')}
-                                    />
-                                    : null
-                                }
-                            </>
-                        }
-                    </div>
-                </div>
+            </main>
+            {/* </Container> */}
+            {/* <div className='w-full h-140 top-0 absolute backdrop-blur-lg bg-radial to-30% from-transparent to-light dark:to-dark z-[-3]'></div> */}
+            
+            <main className=''>
+                
+                
                 {/* Related Movies */}
-                <div className='lg:px-25 md:px-10 min-h-100 sm:px-10 px-5'>
-                    <strong className='font-roboto rtl:font-vazir text-dark dark:text-light pointer-events-none text-lg tracking-wider'>{movie.isMovie ? t('movie.related-movies') : t('movie.related-series')}</strong>
-                    
-                        
-                    <RelatedMovies
-                        relatedMovies={movie.related}
-                    />
-                </div>
+                
 
-                <AllComments comments={movie.comments} />
+                
             </main>
 
             <SiteFooter />

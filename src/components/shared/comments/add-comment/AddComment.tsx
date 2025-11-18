@@ -66,7 +66,7 @@ export default function AddComment({ hasCancel = false, cancelFn, parent, addCom
 
 
     return (
-        <div className={`relative  py-4 pb-8 ${hasCancel ? 'w-full px-0' : 'lg:px-25 md:px-10 sm:px-10 px-5'}  `}>
+        <div className={`relative  py-4 pb-8`}>
                 <strong className={`pointer-events-none text-dark text-lg tracking-wider transition-padding dark:text-light absolute bg-light dark:bg-dark px-3 top-0.5 transition-item-none
                         rtl:font-vazir rtl:right-13 left-13 sm:rtl:right-20 sm:left-20 md:rtl:right-20 md:left-20 lg:rtl:right-33 lg:left-33 rtl:left-auto right-auto font-roboto`}
                     >{ hasCancel ? (t('movie.reply-to') + parent?.display_name) : t('movie.leave-comment') }</strong>
