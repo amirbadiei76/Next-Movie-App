@@ -101,9 +101,9 @@ export default function ProfileNavigator() {
 
 
     return (
-        <aside className={`sm:fixed flex flex-col sm:min-w-67.5 gap-4 ${locale === 'fa' ? 'sm:rounded-tl-2xl sm:rounded-bl-2xl sm:right-0 sm:left-auto' : 'sm:rounded-tr-2xl sm:rounded-br-2xl sm:left-0 sm:right-auto'} sm:overflow-hidden px-0 sm:px-8 py-0 sm:py-8 sm:bg-light-second sm:dark:bg-dark-between`}>
+        <aside className={`flex flex-col h-fit md:min-w-67.5 gap-4 ${locale === 'fa' ? 'md:rounded-lg md:right-0 md:left-auto' : 'md:rounded-lg md:left-0 md:right-auto'} md:overflow-hidden px-0 md:px-8 py-0 md:py-8 md:bg-light-second md:dark:bg-dark-between`}>
             
-            <div className='hidden sm:flex flex-col gap-4'>
+            <div className='hidden md:flex flex-col gap-4'>
                 {
                     profileRoutes.map((item, index) => {
                         return (
@@ -122,7 +122,7 @@ export default function ProfileNavigator() {
 
 
             <div
-                className='flex sm:hidden rounded-lg relative bg-light-second dark:bg-dark-between hover:cursor-pointer sm:rounded-none sm:bg-transparent border border-dark-second dark:border-dark-second sm:border-none'
+                className='flex md:hidden rounded-lg relative bg-light-second dark:bg-dark-between hover:cursor-pointer md:rounded-none md:bg-transparent'
                 >
                 <div
                     // onClick={() => setShowProfileItems(show => !show)}
@@ -137,7 +137,7 @@ export default function ProfileNavigator() {
                 
                 <div
                     style={{visibility: showProfileItems ? 'visible' : 'hidden', opacity: showProfileItems ? 1 : 0}} 
-                    className='flex flex-col w-full border border-dark-second dark:border-dark-second overflow-hidden absolute top-[120%] sm:hidden bg-light-second dark:bg-dark-between rounded-lg hover:cursor-pointer sm:rounded-none sm:bg-transparent'
+                    className='flex flex-col w-full overflow-hidden absolute top-[120%] md:hidden bg-light-second dark:bg-dark-between rounded-lg hover:cursor-pointer md:rounded-none md:bg-transparent'
                 >
                     {
                         profileRoutes

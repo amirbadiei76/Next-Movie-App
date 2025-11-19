@@ -18,7 +18,7 @@ export default function Layout({children}: ILayoutProps) {
 // </div>
     <div className='bg-light dark:bg-dark transition-item-none transition-padding transition-margin transition-color'>
         <Container >
-            <div className='flex flex-col w-full py-8 relative'>
+            <div className='flex flex-col md:flex-row py-8 relative'>
                 <ProfileNavigator />
                 {children}
             </div>

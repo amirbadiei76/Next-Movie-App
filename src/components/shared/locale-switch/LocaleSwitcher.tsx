@@ -124,7 +124,7 @@ export default function LocaleSwitcher() {
             </div>
             
             <div
-                className={`top-12 rounded-md overflow-hidden left-auto right-auto absolute w-full flex flex-col`}
+                className={`top-10.5 rounded-md overflow-hidden left-auto right-auto absolute w-full flex flex-col`}
                 style={{visibility: showLocales ? 'visible' : 'hidden', opacity: showLocales ? 1 : 0}}    
                 >
                 {availableLocales()}
